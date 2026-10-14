@@ -1,0 +1,216 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+
+<!--
+   =====================
+   	PresseAktuell
+   -->
+<f:if condition="{settings.templateLayout} == 3">
+   <n:excludeDisplayedNews newsItem="{newsItem}" />
+   	<div class=" col-lg-6 col-xs-12 col-md-6 col-sm-6 sadasd" style="padding:0" >
+	    <div class="presseAktuell article  {f:if(condition: '{my} %2', then: ' mleft',else:'mright')}" >
+             
+
+               <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                <f:variable name="image" value="{newsItem.media.0}" />
+                <f:variable name="metaData" value="{image.originalResource.originalFile.properties}" />
+
+            <a class="lightbox" rel="lightbox-group-111" href="{newsItem.media.0.originalResource.publicUrl}" 
+            data-lightbox-width="{metaData.width}" 
+            data-lightbox-height="{metaData.height}"  
+            data-lightbox-title="{newsItem.title}" 
+            data-lightbox-alt="{newsItem.title}" 
+            data-lightbox-caption="">
+                     
+            
+                    <div class="header">
+                     <h3>
+                         {newsItem.title}
+                     </h3>
+                  </div>
+                     <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                     <f:if condition="{mediaElement.originalResource.type} == 2">
+                          <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="315" height="220"/>
+                      </f:if>
+                      <f:if condition="{mediaElement.originalResource.type} == 5">
+                          <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="315" height="220"/>
+                      </f:if>
+                  </f:alias>
+             </a>
+         </f:alias>
+
+	   </div>
+   </div>
+</f:if>
+<!--
+   EnDE PresseAktuell
+   =====================
+   PresseArchiv
+   -->
+<!--
+   =====================
+   	PresseArchiv
+   -->
+<f:if condition="{settings.templateLayout} == 4">
+   <n:excludeDisplayedNews newsItem="{newsItem}" />
+
+
+
+   <f:if condition="{newsItem.media}">
+    <f:then>
+        <f:variable name="image" value="{newsItem.media.0}" />
+        <f:variable name="metaData" value="{image.originalResource.originalFile.properties}" />
+
+        <div class="presseArchiv">
+            <a class="lightbox" rel="lightbox-group-112" href="{newsItem.media.0.originalResource.publicUrl}" 
+            data-lightbox-width="{metaData.width}" 
+            data-lightbox-height="{metaData.height}"  
+            data-lightbox-title="{newsItem.title}" 
+            data-lightbox-alt="{newsItem.title}" 
+            data-lightbox-caption="">
+                     
+                          {newsItem.title}
+            </a>
+           </div>
+
+
+ 
+    </f:then>
+    <f:else>
+        <p>Kein Bild vorhanden</p>
+    </f:else>
+</f:if>
+
+
+ 
+</f:if>
+<!--
+   EnDE PresseArchiv
+   =====================
+   Topthemen
+   -->
+<!--
+   =====================
+   	TopThemen
+   -->
+    
+
+<f:if condition="{settings.templateLayout} == 2">
+   <div class=" col-lg-6 col-xs-12 col-md-6 col-sm-6" >
+	   <f:if condition="{my} %2">
+	      <f:then>
+	         <div class="TopThemen article mleft" >
+	      </f:then>
+	      <f:else>
+	         <div class="TopThemen article mright" >
+	      </f:else>
+	   </f:if>
+	   <n:excludeDisplayedNews newsItem="{newsItem}" />
+	   <n:link newsItem="{newsItem}" settings="{settings}">
+		   <!-- header -->
+		   <h3>
+		   	{newsItem.title}  
+		   </h3>
+        
+		    <f:if condition="{newsItem.media}"> 
+			    <f:then>
+				   <f:alias map="{mediaElement: newsItem.mediaPreviews.0}"> 
+					   <div class="news-img-wrap" style=" width:100%; height:230px;background: url({newsItem.media.0.originalResource.publicUrl}) center center no-repeat; background-size:cover;" >
+				   </f:alias>	 
+			    </f:then>
+			    <f:else>
+				    <f:if condition="{settings.displayDummyIfNoMedia}">
+				   		<div  style="background: url({settings.list.media.dummyImage})" onClick="">                 
+				    </f:if>
+			   </f:else>
+		  	</f:if>
+
+      
+		   <!-- teas=ser text -->
+		   <div class="teaser-text">
+			   	<f:if condition="{newsItem.teaser}">
+				   	<f:then>
+				   		{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+				   	</f:then>
+				   	<f:else>
+				   		{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+				   	</f:else>
+			   	</f:if>
+		   </div>
+   </div></n:link></div></div>
+</f:if>
+<!--
+   EnDE TopThemen
+   =====================
+   Subthemen
+   -->
+<f:if condition="{settings.templateLayout} == 1">
+   <div class="col-xs-12 item col-sm-4" >
+		<div class="card  ">
+			<div class="view overlay hm-white-slight">
+				 	        <f:if condition="{newsItem.falMediaPreviews}">
+					
+					          <f:then>
+					
+					            <n:link newsItem="{newsItem}" settings="{settings}">
+					
+					              <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+					
+					                <f:if condition="{mediaElement.originalResource.type} == 2">
+					
+					                  <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"  />
+					
+					                </f:if>
+					
+					                <f:if condition="{mediaElement.originalResource.type} == 4">
+					
+					                  <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+					
+					                </f:if>
+					
+					              </f:alias>
+					
+					            </n:link>
+					
+					          </f:then>
+					
+					          <f:else>
+					
+					            <f:if condition="{settings.displayDummyIfNoMedia}"> <span class="no-media-element">
+					
+					              <n:link newsItem="{newsItem}" settings="{settings}">
+					
+					                <f:image src="{settings.list.media.dummyImage}" title="" alt=""  />
+					
+					              </n:link>
+					
+					              </span> </f:if>
+					
+					          </f:else>
+					
+					        </f:if>
+			 
+					<div class="mask waves-effect"></div>
+			 
+			</div>
+			<div class="card-block">
+				<h5 class="card-title">{newsItem.title}</h5>
+		 
+				 
+				{newsItem.teaser} 
+			</div>
+			<div class="card-btn  ">
+				
+				 <n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-theme btn-xs waves-effect waves-light  "> mehr <i class="fa fa-3 fa-arrow-circle-right"></i></n:link>
+				 
+			</div>
+		</div>
+	</div>
+</f:if> 
+
+</html> 

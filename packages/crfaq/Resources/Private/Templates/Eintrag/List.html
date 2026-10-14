@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+		<f:flashMessages />
+		
+		<f:if condition="{config.layout} == 'klapper'">
+			<f:then>
+				<f:render partial="Klapper" arguments="{config: config, eintrags: eintrags, kategorien: kategorien}" />
+			</f:then>
+			<f:else>
+				<f:render partial="Liste" arguments="{config: config, eintrags: eintrags, kategorien: kategorien}" />
+			</f:else>
+		</f:if>
+	</f:section>
+</html>

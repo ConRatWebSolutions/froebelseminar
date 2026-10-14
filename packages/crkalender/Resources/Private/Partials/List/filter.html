@@ -1,0 +1,22 @@
+<f:if condition="{filters} == 1">
+   <div class="row">  
+    <div class="col-md-6">
+        <a href="https://www.froebelseminar.de/aktuelles/termine/kalender-kassel" class="filterbtn">Kassel</a>
+        <a href="https://www.froebelseminar.de/aktuelles/termine/kalender-korbach" class="filterbtn">Korbach</a>
+    
+    </div>
+     <div class="col-md-6">
+              <div class="controls" style="text-align:right; margin: 15px"> 
+                 <button class="filter mixitup" data-filter="all">Alle</button>
+              <f:for each="{filterarray}" as="filter"> 
+                 <button class="filter" data-filter="{filter.uid}">{filter.titel}</button>
+
+              </f:for> 
+             
+            </div>  
+    
+    </div> 
+</div>       
+
+</f:if>
+ 

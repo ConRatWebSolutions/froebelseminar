@@ -1,0 +1,5 @@
+# Automatische Aktivierung der Extension
+mod.web_layout.tt_content.preview.list.crkalender_crkalender = EXT:crkalender/Resources/Private/Templates/Preview.html
+
+# Extension automatisch in Root-Template aktivieren
+TCEFORM.tt_content.list_type.addItems.crkalender_crkalender = ConRat Kalender

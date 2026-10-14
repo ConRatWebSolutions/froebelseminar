@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-30T15:02:00Z" product-name="crfaq">
+		<header/>
+		<body>
+			<trans-unit id="titel.description">
+				<source>titel</source>
+			</trans-unit>
+			<trans-unit id="beschreibung.description">
+				<source>beschreibung</source>
+			</trans-unit>
+			<trans-unit id="subvon.description">
+				<source>subvon</source>
+			</trans-unit>
+			<trans-unit id="sortings.description">
+				<source>sortings</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

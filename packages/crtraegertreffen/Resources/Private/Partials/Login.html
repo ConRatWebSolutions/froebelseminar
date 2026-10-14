@@ -1,0 +1,32 @@
+	<h1>An der Website anmelden</h1>
+	<p>Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden:</p>
+	 
+	 <f:if condition="{pDFs.emsg} != ''">
+	   <div class="alert alert-warning">{pDFs.emsg}</div>  
+	 </f:if>
+	<form action="/traegertreffen" target="_top" method="post" onsubmit="">
+		<fieldset>
+		<legend>Anmelden</legend>
+		<div class="form-group">
+			 <label for="exampleInputEmail1">Benutzername:</label><br>
+			 <input type="text" id="username" name="username" value="">
+	     </div>
+			<br>
+		<div class="form-group">
+			 <label for="exampleInputEmail1">Passwort:</label><br>
+			 <input type="password" id="password" name="password" value="" data-rsa-encryption="">
+	     </div>		
+			
+	 
+	 
+	
+		
+	
+		<div>
+			<input type="submit" name="submit" value="Anmelden">
+		</div>
+	
+	 
+		</fieldset>
+	</form>
+ 

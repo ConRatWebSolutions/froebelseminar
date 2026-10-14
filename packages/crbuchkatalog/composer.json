@@ -1,0 +1,36 @@
+{
+    "name": "conrat/crbuchkatalog",
+    "type": "typo3-cms-extension",
+    "description": "ConRat Buchkatalog Extension für TYPO3 v13",
+    "authors": [
+        {
+            "name": "ConRat",
+            "email": "info@conrat.de"
+        }
+    ],
+    "version": "1.0.1",
+    "require": {
+        "typo3/cms-core": "^13.0",
+        "typo3/cms-extbase": "^13.0",
+        "typo3/cms-fluid": "^13.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "crbuchkatalog"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Conrat\\Crbuchkatalog\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Conrat\\Crbuchkatalog\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "crbuchkatalog": "self.version",
+        "typo3-ter/crbuchkatalog": "self.version"
+    }
+}

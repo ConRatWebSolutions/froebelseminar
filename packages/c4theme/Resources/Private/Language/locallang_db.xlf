@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:c4theme/Resources/Private/Language/locallang_db.xlf" date="2025-09-10T13:15:00Z" product-name="c4theme">
+        <header/>
+        <body>
+            <trans-unit id="pages.tx_c4theme_page_heading">
+                <source>Seitenüberschrift</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

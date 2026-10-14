@@ -1,0 +1,5 @@
+# Automatische Aktivierung der Extension
+mod.web_layout.tt_content.preview.list.conratpresse_conratpresse = EXT:conratpresse/Resources/Private/Templates/Preview.html
+
+# Extension automatisch in Root-Template aktivieren
+TCEFORM.tt_content.list_type.addItems.conratpresse_conratpresse = ConRat Presse

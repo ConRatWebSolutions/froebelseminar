@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-crfaq" >
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.frage" />
+		</td>
+		<td>
+		{eintrag.frage}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.antwort" />
+		</td>
+		<td>
+		{eintrag.antwort}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.bilder" />
+		</td>
+		<td>
+				<f:image src="{eintrag.bilder.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.blog1" />
+		</td>
+		<td>
+		{eintrag.blog1}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.blog1bilder" />
+		</td>
+		<td>
+				<f:image src="{eintrag.blog1bilder.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.blog2" />
+		</td>
+		<td>
+		{eintrag.blog2}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.blog2bilder" />
+		</td>
+		<td>
+				<f:image src="{eintrag.blog2bilder.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.downloads" />
+		</td>
+		<td>
+				<a href="{eintrag.downloads.originalResource.publicUrl}">
+					{eintrag.downloads.originalResource.name}
+				</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crfaq_domain_model_eintrag.sortings" />
+		</td>
+		<td>
+		{eintrag.sortings}
+		</td>
+	</tr>
+</table>
+</html>

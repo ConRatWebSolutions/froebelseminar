@@ -1,0 +1,51 @@
+# # Seiteohnebanner
+mod {
+    web_layout {
+        BackendLayouts {
+            page-familienzentrum{
+                title = Familienzentrum
+                icon = EXT:c4theme/Resources/Public/Icons/BeLayouts/Seitenleiste.svg
+                config {
+					backend_layout {
+						colCount = 12
+						rowCount = 3
+						rows {
+							1{
+								columns {
+									1 {
+										name =   Banner 
+										colPos = 2
+										colspan = 12
+									}
+								}
+							}
+							2{
+								columns {
+									1 {
+										name = Hauptinhalt
+										colPos = 0
+										colspan = 9
+									}
+									 2 {
+										name = Menü
+										colspan = 3
+										colPos = 4
+									}
+								}
+							}
+							3{
+								columns {
+									1 {
+										name = weiterer Inhalt
+										colPos = 1
+										colspan = 12
+									}
+								}
+							}
+						}
+					}
+                }
+            }
+        }
+    }
+}

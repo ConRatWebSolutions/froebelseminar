@@ -1,0 +1,27 @@
+{
+    "name": "conrat/conratpresse",
+    "type": "typo3-cms-extension",
+    "description": "ConRat Presse Extension für TYPO3 v13",
+    "authors": [
+        {
+            "name": "ConRat",
+            "email": "info@conrat.de"
+        }
+    ],
+    "version": "1.0.2",
+    "require": {
+        "typo3/cms-core": "^13.0",
+        "typo3/cms-extbase": "^13.0",
+        "typo3/cms-fluid": "^13.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "conratpresse"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Conrat\\Conratpresse\\": "Classes/"
+        }
+    }
+}

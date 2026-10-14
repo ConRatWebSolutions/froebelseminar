@@ -1,0 +1,207 @@
+/*
+ * Standard TYPO3 Frame Styles
+ * Stellt sicher, dass die Standard-TYPO3-Frames korrekt angezeigt werden
+ */
+
+/* Standard TYPO3 Frame Classes */
+.frame-default {
+    
+    
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.frame-ruler-before {
+     
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.frame-ruler-after {
+   
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.frame-indent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.frame-indent-left {
+    margin-left: 20px;
+}
+
+.frame-indent-right {
+    margin-right: 20px;
+}
+
+/* Content Element Frames */
+.ce-frame {
+    position: relative;
+    margin: 20px 0;
+}
+
+.ce-frame.frame-default {
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ce-frame.frame-ruler-before {
+    border-top: 2px solid #0066cc;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.ce-frame.frame-ruler-after {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.ce-frame.frame-indent {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.ce-frame.frame-indent-left {
+    margin-left: 30px;
+}
+
+.ce-frame.frame-indent-right {
+    margin-right: 30px;
+}
+
+/* Frame Headers */
+.ce-frame-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+    font-size: 16px;
+}
+
+/* Frame Content */
+.ce-frame-content {
+    line-height: 1.6;
+}
+
+ 
+/* Responsive Frames */
+@media (max-width: 768px) {
+    .ce-frame.frame-indent,
+    .ce-frame.frame-indent-left,
+    .ce-frame.frame-indent-right {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .ce-frame.frame-default {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .ce-frame.frame-default {
+        border: 1px solid #000000;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .ce-frame.frame-ruler-before,
+    .ce-frame.frame-ruler-after {
+        border-color: #000000;
+    }
+}
+
+
+ 
+ 
+
+  .breadcrumb li {
+    display: inline-block;
+  }
+  .breadcrumb li::before {
+        padding: 0 5px;
+        color: #ccc;
+        content: "/\00a0";
+  }
+
+  .breadcrumb li.active {
+     color: #777777;
+  }
+
+  .frame-background-light  {
+    background-color: #f5f5f5;
+    padding: 80px;
+  }
+
+  .frame-background-dark  {
+    background-color: #333333;
+  }
+  
+  .frame-space-before-large {
+    margin-top: 50px;
+  }
+
+  .frame-space-after-large {
+    margin-bottom: 50px;
+  }
+
+  .frame-space-before-medium {
+    margin-top: 25px;
+  }
+
+  .frame-space-after-medium {
+    margin-bottom: 25px;
+  }
+
+  .frame-space-before-small {
+    margin-top: 10px;
+  }
+
+  .frame-space-after-small {
+    margin-bottom: 10px;
+  }
+  .frame-space-before-extra-large {
+    margin-top: 100px;
+  }
+
+  .frame-space-after-extra-large {
+    margin-bottom: 100px;
+  }
+
+.frame-background-primary, .frame-background-secondary, .frame-background-tertiary, .frame-background-quaternary,
+.frame-background-quinary, .frame-background-dark {
+    padding: 80px;
+}
+
+.frame-background-primary .element-header, .frame-background-secondary .element-header, .frame-background-tertiary .element-header, .frame-background-quaternary .element-header,
+.frame-background-quinary .element-header, .frame-background-dark .element-header {
+    color: #fff;
+}
+  
+.frame-has-backgroundimage h2, .h2BorderBottom, .frame-header .h1 {
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+
+  @media (min-width: 768px) {
+    #p129  .textpic-left .textpic-item  {
+      width:  22% !important;
+    }
+    
+  } 
+
+
+  @media (max-width: 768px) {
+  
+    .frame-background-light {
+      padding: 20px !important;
+    }
+    }

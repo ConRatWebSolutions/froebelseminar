@@ -1,0 +1,17 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <div class="col-sm-{data.groesse} teambox ">
+        <div class="mitarbeiter  "> 
+            <f:if condition="{previewImage}">
+                 <div class="image">
+                    <f:image image="{previewImage.0}" />
+                </div>
+            </f:if>
+            <h3>{data.header}</h3>  
+			<div class="titel">
+            	 <f:format.html>{data.bodytext}</f:format.html>  
+            </div>
+       	</div>
+        
+    </div>
+</html>

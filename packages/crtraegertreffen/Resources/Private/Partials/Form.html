@@ -1,0 +1,235 @@
+	<f:form   id="myform" action="newforms" class="myform" name="dataSubmit" objectName="dataSubmit"> 
+ 	
+ 	
+ 	 <div class="row">
+ 		<div class="col-md-8"> 
+		 
+				
+		 	
+		 <div class="formrow">		
+	     <h2>Adresse</h2>	
+		<div class="form-group">
+						<label for="titel">Name der Einrichtung *</label>
+						<f:form.textfield id="name" name="name" class="form-control checkInput" property="name" value="" placeholder="Bitte geben Sie den Namen Ihrer Einrichtung ein" required="required" />
+					</div>		 
+		  <div class=" ">
+					<div class="form-group">
+						<label for="titel">Postadresse  *</label>
+						<f:form.textfield id="anschrift" name="anschrift"  class="form-control checkInput" property="anschrift" value=""   required="required" />  
+					</div>
+				</div>				
+		  
+ 		<div class="form-group">
+						<label for="titel">E-Mail der Einrichtung *</label>
+						<f:form.textfield id="email" name="email" class="form-control checkInput" property="email" value=""  required="required" />
+					</div>		  
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">Telefon</label>
+						<f:form.textfield id="telefon" name="telefon" class="form-control checkInput" property="telefon" value=""   required="required" />
+					</div>
+				</div>
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">Webdomain *</label>
+						<f:form.textfield id="web"  name="web" class="form-control checkInput" property="web" value="" placeholder="www.IHRE-EINRICHTUNG.de" required="required" />
+					</div>
+				</div>				
+			
+		  </div>
+		 <div class="formrow">		
+	     <h2>Ihre Ansprechpartnerin / Ihr Ansprechpartner</h2>		  				
+ 		
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">Name *</label>
+						<f:form.textfield id="ansprechpartner" name="ansprechpartner" class="form-control checkInput" property="ansprechpartner" value=""  />
+					</div>
+				</div>
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">Telefon *</label>
+						<f:form.textfield id="aptelefon" name="aptelefon" class="form-control checkInput" property="aptelefon" value=""   />
+					</div>
+				</div>	
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">E-Mail *</label>
+						<f:form.textfield id="apemail" name="apemail" class="form-control checkInput" property="apemail" value=""    />
+					</div>
+				</div>
+				<div class=" ">
+					<div class="form-group">
+						<label for="titel">Bevorzugte Möglichkeit der Kontaktaufnahme: *</label><br>
+						<div class="col-md-3">
+							<f:form.checkbox name="kontaktaufnahme[]" property="kontaktaufnahme" multiple="1" value="Telefon" /> Telefon 
+						</div>
+						<div class="col-md-3">
+							<f:form.checkbox name="kontaktaufnahme[]" property="kontaktaufnahme" multiple="1" value="E-Mail" /> E-Mail 
+						</div>
+						<div class="col-md-3">
+							<f:form.checkbox name="kontaktaufnahme[]" property="kontaktaufnahme" multiple="1" value="Videocall" /> Videocall 
+						</div>												 
+						            
+					</div>
+				</div>				
+											
+				
+			
+		 </div>
+		 <div class="formrow">		
+	     <h2>Zielgruppe </h2>	Welche Menschen begleiten wir?	 
+				<div class=" ">
+					<div class="form-group">
+						 
+						<f:form.textarea  id="zielgruppe" name="zielgruppe" class="form-control checkInput" property="zielgruppe"   />
+					</div>
+				</div>
+					 
+		 </div>		
+		 <div class="formrow">		
+	     <h2>Angebotsformen  </h2>	Welche Angebote halten wir für unsere Klienten vor? 
+				<div class=" ">
+					<div class="form-group">
+						 
+						<f:form.textarea  id="angebotsformen" name="angebotsformen" class="form-control checkInput" property="angebotsformen"   />
+					</div>
+				</div>
+						 
+		 </div>		 
+		 <div class="formrow">		
+	     <h2>Konzeptionelle Schwerpunkte  </h2>	Welche Ideen leiten uns?
+				<div class=" ">
+					<div class="form-group">
+						 
+						<f:form.textarea  id="schwerpunkte" name="schwerpunkte" class="form-control checkInput" property="schwerpunkte"   />
+					</div>
+				</div>	 
+		 </div>	
+		 
+		 
+		 <div class="formrow">		
+	     <h2>Sonstiges  </h2>	 
+ 		  
+				<div class=" ">
+					<div class="form-group">
+						 
+						<f:form.textarea  id="sonstiges" name="sonstiges" class="form-control checkInput" property="sonstiges"   />
+					</div>
+				</div>
+				
+		 	 
+		 </div>			 	  
+ 	</div>
+ 	<div class="col-md-4"> 
+  		 <div class="formrow">		
+	     <h2>Logo  </h2>
+ 
+ 		 
+ 
+ 		         <div class='preview' style="display: none">
+		            <img src="" id="img" width="100" height="100">
+		        </div>
+		        <div >
+		            <input type="file" id="file" name="file" />
+		            <a type="button " class="button btn btn-primary"   id="but_upload">Upload</a>
+		            <input type="hidden" value="{data.fb.uid}" id="uploaduid" />
+		            <input type="hidden" value="tx_gkfinder_domain_model_fachbereich" id="uploadtable" />
+		            <input type="hidden" value="bilder" id="uploadtablefield" />
+		        </div>
+		        <f:form.hidden name="logourl" property="logourl"  id="logourl" class="form-check-input" value="" /> 
+ 			 
+ 		 </div>		
+ 		 <div class="formrow ppraxisfeld">		
+	     <h2>Praxisfeld  </h2>	 
+ 		  
+				<div class=" ">
+					<div class="form-check">
+						<f:form.checkbox name="praxisfeld[]" property="praxisfeld" multiple="1" class="form-check-input" value="1" />
+						<label class="form-check-label">U3-Bereich</label>
+					</div>
+					<div class="form-check">
+						<f:form.checkbox name="praxisfeld[]" property="praxisfeld" multiple="1" class="form-check-input" value="2" />
+						<label class="form-check-label">Kinder von 3 bis 6 Jahren</label>
+					</div>
+					<div class="form-check">
+						<f:form.checkbox name="praxisfeld[]" property="praxisfeld" multiple="1" class="form-check-input" value="3" />
+						<label class="form-check-label">Grundschule und Hort</label>
+					</div>					
+					<div class="form-check">
+						<f:form.checkbox name="praxisfeld[]" property="praxisfeld" multiple="1" class="form-check-input" value="4" />
+						<label class="form-check-label">Erzieherische Hilfen</label>
+					</div>	
+		 					
+					<div class="form-check">
+						<f:form.checkbox name="praxisfeld[]" property="praxisfeld" multiple="1" class="form-check-input" value="5" />
+						<label class="form-check-label">Einrichtungen und Dienste für Menschen mit Behinderung</label>
+					</div>										
+				</div>
+		 </div>
+		 
+ 		 <div class="formrow">		
+	     <h2>Praktikums- und   Arbeitsmöglichkeiten  </h2>	 
+ 		  
+				<div class=" ">
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Hospitationstag" /> 
+						<label class="form-check-label">Hospitationstag </label> <br> <span class="">Höhere Berufsfachschule für Sozialassistenz (HBSA) </span>
+					</div>
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Blockpraktikum" /> 
+						<label class="form-check-label">Blockpraktikum  </label> <br> <span class="">Höhere Berufsfachschule für Sozialassistenz (HBSA) </span>
+					</div>					
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Jahrespraktikum" /> 
+						<label class="form-check-label">Jahrespraktikum   </label> <br> <span class="">Höhere Berufsfachschule für Sozialassistenz (HBSA) </span>
+					</div>	
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Fachpraxis" /> 
+						<label class="form-check-label">Dreijährige Fachpraxis    </label> <br> <span class="">praxisintegrierte Erzieher*in-nen-Ausbildung (PIA)</span>
+					</div>					
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Blockpraktikum" /> 
+						<label class="form-check-label">Blockpraktikum    </label> <br> <span class="">Erzieher*innen-Ausbildung in Vollzeit und Teilzeit (FSP/TEA)</span>
+					</div>					
+					<div class="form-check">
+						<f:form.checkbox name="praktikum" property="praktikum" multiple="1" class="form-check-input" value="Berufspraktikum" /> 
+						<label class="form-check-label">Berufspraktikum     </label> <br> <span class="">FSP/TEA</span>
+					</div>	
+					<div class="form-check">
+						<f:form.checkbox name="praktikum"  property="praktikum" multiple="1" class="form-check-input" value="Fachkraft" /> 
+						<label class="form-check-label">Anstellung als Fachkraft      </label>  
+					</div>													
+				</div>
+		 </div>	
+ 		 <div class="formrow">		
+	     <h2>Social-Media  </h2>			 
+					<div class="form-group">
+						<label for="titel">Facebook</label>
+						<f:form.textfield id="facebook" name="facebook"  class="form-control checkInput" property="facebook" value=""  />  
+					</div>		 
+					<div class="form-group">
+						<label for="titel">Instagram</label>
+						<f:form.textfield id="instagram" name="instagram"  class="form-control checkInput" property="instagram" value=""  />  
+					</div>
+					<div class="form-group">
+						<label for="titel">YouTube</label>
+						<f:form.textfield id="youtube" name="youtube"  class="form-control checkInput" property="youtube" value=""  />  
+					</div>
+		 </div>
+ 		 <div class="formrow">		
+	     <h2>Zugehörigkeit  </h2>
+					<div class="form-group">
+						<label for="titel">Anzeigen in</label><br>
+						  <f:form.select class="form-control checkInput" name="standort" property="standort" >
+						  	<f:form.select.option value="1">Fröbelseminar Kassel</f:form.select.option>
+						  	<f:form.select.option value="2">Fröbelseminar Korbach</f:form.select.option>
+						  </f:form.select>
+					</div>	     
+	     		 
+		 </div>		 		 	 			
+ 	</div> 		  			
+ </div> 	 
+		   
+		  <f:form.button property="saveit" id="saveTrigger" class="btn btnn btn-success" value="1" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Speichern</f:form.button> 	
+ 	</f:form>

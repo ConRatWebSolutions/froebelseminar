@@ -1,0 +1,32 @@
+  		<ul class="catnav">   
+				<f:for each="{kategorien}" as="kategorie" iteration="iterator">
+					<f:if condition="{kategorie.uid}=={activeurl}"  >
+						<f:then>
+							<li class="active"><f:link.action pageUid="{config.idlist}" action="list" arguments="{uid : '{kategorie.uid}'}">{kategorie.titel}</f:link.action>
+								
+								<f:if condition="{kategorie.subs.0.uid}!=''"  >
+										<ul>
+										<f:for each="{kategorie.subs}" as="sub">
+												<li><f:link.action pageUid="{config.idlist}" action="list" arguments="{uid : '{sub.uid}'}">{sub.titel}</f:link.action> </li>
+										</f:for>	
+										</ul>
+								</f:if>	
+								
+							</li> 
+						</f:then>
+						<f:else>
+						    <li><f:link.action pageUid="{config.idlist}" action="list" arguments="{uid : '{kategorie.uid}'}">{kategorie.titel}</f:link.action>
+						    	
+								<f:if condition="{kategorie.subs.0.uid}!=''"  >
+										<ul>
+										<f:for each="{kategorie.subs}" as="sub">
+												<li><f:link.action pageUid="{config.idlist}" action="list" arguments="{uid : '{sub.uid}'}">{sub.titel}</f:link.action> </li>
+										</f:for>	
+										</ul>
+								</f:if>					    	
+						    	
+						    </li> 
+						</f:else>
+					</f:if>	
+				</f:for>
+			</ul>

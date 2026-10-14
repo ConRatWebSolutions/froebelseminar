@@ -1,0 +1,174 @@
+/* TYPO3 Backend CSS für Logbook-Modul */
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background-color: #f5f5f5; 
+}
+
+.module-docheader { 
+    background: #fff; 
+    border: 1px solid #d3d3d3; 
+    border-bottom: none; 
+}
+
+.module-docheader-bar { 
+    padding: 15px 20px; 
+    border-bottom: 1px solid #d3d3d3; 
+}
+
+.module-docheader-bar-title { 
+    margin: 0; 
+    font-size: 18px; 
+    font-weight: 600; 
+    color: #333; 
+}
+
+.module-body { 
+    background: #fff; 
+    border: 1px solid #d3d3d3; 
+    padding: 20px; 
+}
+
+.form-section { 
+    margin-bottom: 20px; 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: 600; 
+    color: #333; 
+}
+
+.form-control { 
+    width: 200px; 
+    padding: 8px 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 14px; 
+}
+
+.button-bar { 
+    margin: 20px 0; 
+}
+
+.button-group { 
+    display: inline-block; 
+}
+
+.btn { 
+    display: inline-block; 
+    padding: 8px 16px; 
+    margin-bottom: 0; 
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: 1.42857143; 
+    text-align: center; 
+    white-space: nowrap; 
+    vertical-align: middle; 
+    cursor: pointer; 
+    border: 1px solid transparent; 
+    border-radius: 4px; 
+    text-decoration: none; 
+}
+
+.btn-default { 
+    color: #333; 
+    background-color: #fff; 
+    border-color: #ccc; 
+}
+
+.btn-default:hover { 
+    color: #333; 
+    background-color: #e6e6e6; 
+    border-color: #adadad; 
+}
+
+.btn-primary { 
+    color: #fff; 
+    background-color: #337ab7; 
+    border-color: #2e6da4; 
+}
+
+.btn-primary:hover { 
+    color: #fff; 
+    background-color: #286090; 
+    border-color: #204d74; 
+}
+
+.btn-sm { 
+    padding: 5px 10px; 
+    font-size: 12px; 
+    line-height: 1.5; 
+    border-radius: 3px; 
+}
+
+.table { 
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+    background-color: transparent; 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+}
+
+.table th, .table td { 
+    padding: 8px; 
+    line-height: 1.42857143; 
+    vertical-align: top; 
+    border-top: 1px solid #ddd; 
+}
+
+.table thead th { 
+    vertical-align: bottom; 
+    border-bottom: 2px solid #ddd; 
+    font-weight: 600; 
+    background-color: #f5f5f5;
+}
+
+.table-striped tbody tr:nth-of-type(odd) { 
+    background-color: #f9f9f9; 
+}
+
+.table-hover tbody tr:hover { 
+    background-color: #f5f5f5; 
+}
+
+.table-fit { 
+    overflow-x: auto; 
+}
+
+.table-info { 
+    background-color: #d9edf7; 
+}
+
+.table-info td { 
+    background-color: #d9edf7; 
+    font-weight: bold;
+}
+
+h2 { 
+    margin: 20px 0 15px 0; 
+    font-size: 24px; 
+    font-weight: 600; 
+    color: #333; 
+}
+
+.t3-icon { 
+    display: inline-block; 
+    width: 16px; 
+    height: 16px; 
+    margin-right: 5px; 
+    vertical-align: middle; 
+}
+
+#printtables {
+    margin-top: 20px;
+}

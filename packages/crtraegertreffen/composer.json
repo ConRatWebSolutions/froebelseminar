@@ -1,0 +1,28 @@
+{
+    "name": "conrat/crtraegertreffen",
+    "type": "typo3-cms-extension",
+    "description": "ConRat Trägertreffen Extension für TYPO3 v13",
+    "authors": [
+        {
+            "name": "ConRat WebSolutions",
+            "email": "info@conrat.de"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^13.0",
+        "typo3/cms-extbase": "^13.0",
+        "typo3/cms-fluid": "^13.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "crtraegertreffen"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Conrat\\Crtraegertreffen\\": "Classes"
+        }
+    }
+    
+}

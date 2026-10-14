@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Conrat\Crtraegertreffen\:
+    resource: '../Classes/*'
+    exclude:
+      - '../Classes/Domain/Model/*'
+      - '../Classes/Controller/upload.php'
+
+  Conrat\Crtraegertreffen\Domain\Repository\EintragRepository:
+    public: true
+
+  Conrat\Crtraegertreffen\Domain\Repository\KategorieRepository:
+    public: true

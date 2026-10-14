@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.media {
+    elements {
+        c4theme_banner {
+            iconIdentifier = content-image
+            title = LLL:EXT:c4theme/Resources/Private/Language/locallang_db.xlf:tt_content.c4theme_banner.title
+            description = LLL:EXT:c4theme/Resources/Private/Language/locallang_db.xlf:tt_content.c4theme_banner.description
+            tt_content_defValues {
+                CType = c4theme_banner
+            }
+        }
+    }
+    show := addToList(c4theme_banner)
+}

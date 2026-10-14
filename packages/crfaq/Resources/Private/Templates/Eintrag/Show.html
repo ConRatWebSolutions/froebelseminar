@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for displaying a single view for a domain object
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			Show.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+ 
+	<f:section name="content">
+<f:if condition='{config.kategorieansicht}== "no_nav"'>	
+	 <f:render partial="Detail/item" arguments="{eintrags: eintrags, config:config}"/>
+</f:if>
+<f:if condition='{config.kategorie}== "nav_left"'>
+		<div class="row">
+		<div class="col-md-3">	
+			<h3>{config.header}</h3> 
+ 			<f:render partial="nav" arguments="{kategorien:kategorien, config:config}"/>
+		</div>	
+		<div class="col-md-9">
+		   <h1>{config.kategorienbeschreibung.0.titel}</h1>
+		   <f:format.html>{config.kategorienbeschreibung.0.beschreibung}</f:format.html>
+			<div id="accordion" role="tablist"> 
+ 				<f:render partial="Detail/item" arguments="{eintrags: eintrags, config:config}"/>
+			</div>
+		</div>
+		</div>	
+</f:if>
+<f:if condition='{config.kategorieansicht}== "nav_right"'>
+		<div class="row">	
+		<div class="col-md-9">
+		   <h1>{config.kategorienbeschreibung.0.titel}</h1>
+		   <f:format.html>{config.kategorienbeschreibung.0.beschreibung}</f:format.html>
+			<div id="accordion" role="tablist"> 
+ 				<f:render partial="Detail/item" arguments="{eintrags: eintrags, config:config}"/>
+			</div>
+		</div>
+		<div class="col-md-3">	
+			<h3>{config.header}</h3> 
+ 			<f:render partial="nav" arguments="{kategorien:kategorien, config:config}"/>
+		</div>		
+		</div>
+</f:if>
+
+ <a href="javascript:history.back()" class="btn pull-right backbtn ">zurück</a>	
+
+  <f:if condition="{config.shsocialmedia}=='1'">
+  		<f:render partial="Detail/socialmedia" arguments="{config:config}" />
+  </f:if>
+ 
+
+		<f:flashMessages />
+	 
+	</f:section>
+</html>

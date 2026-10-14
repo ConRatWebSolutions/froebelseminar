@@ -1,0 +1,26 @@
+{
+    "name": "conrat/crfaq",
+    "description": "ConRat FAQ Extension for TYPO3 v13",
+    "authors": [
+        {
+            "name": "ConRat",
+            "email": "info@conrat.de"
+        }
+    ],
+    "version": "1.0.1",
+    "require": {
+        "typo3/cms-core": "^13.0",
+        "typo3/cms-extbase": "^13.0",
+        "typo3/cms-fluid": "^13.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "crfaq"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Conrat\\Crfaq\\": "Classes"
+        }
+    }
+}

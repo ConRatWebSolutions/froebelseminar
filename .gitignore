@@ -1,0 +1,20 @@
+.DS_Store
+.idea
+nbproject
+/var/*
+!/var/labels
+/vendor
+/public/*
+!/public/.htaccess
+!/public/eye-able-translate.js
+!/public/oauth.php
+!/public/sso
+# enthält fest eingetragene Live-DB-Zugangsdaten und das Microsoft-OAuth-Secret – nur auf dem Server
+/public/sso/inc/config.inc.php
+/data
+.env
+.env.*
+# enthält encryptionKey und Install-Tool-Hash – nicht ins Repo (maßgebliche Kopie liegt auf dem Server)
+/config/system/settings.php
+# Kundendokumente und Arbeitsdateien – nicht ins Repo
+/lokal_daten

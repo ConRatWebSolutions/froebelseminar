@@ -1,0 +1,34 @@
+ 
+<div class="row">
+	
+	<f:if condition="{images-> f:count()} == 1"> 
+			<f:for each="{images}" as="image">
+	   			<div class="imageContainer col-xs-12" style="margin-bottom:15px;">
+	   			     <f:if condition="{image.title} != ''"><span class="bildtitel">{image.title}</span></f:if>
+	   			     <img src="fileadmin/{image.identifier}" class="responsive-img" alt="{image.alttxt}" />
+	   			     <f:if condition="{image.ref_des} != ''"><span class="bildtext">{image.ref_des}</span></f:if> 
+	   			</div>
+    		</f:for>
+	</f:if>	 
+	
+	<f:if condition="{images-> f:count()} == 2"> 
+			<f:for each="{images}" as="image">
+   			<div class="imageContainer col-xs-6" style="margin-bottom:15px;">
+   				  <f:if condition="{image.title} != ''"><span class="bildtitel">{image.title}</span></f:if>
+   			     <img src="fileadmin/{image.identifier}" class="responsive-img" alt="{image.alttxt}" />
+   			     <f:if condition="{image.ref_des} != ''"><span class="bildtext">{image.ref_des}</span></f:if>
+   			</div>
+    </f:for>
+	</f:if>		
+	
+	<f:if condition="{images-> f:count()} >= 3">
+			<f:for each="{images}" as="image">
+   			<div class="imageContainer col-xs-4" style="margin-bottom:15px;">
+   				 <f:if condition="{image.title} != ''"><span class="bildtitel">{image.title}</span></f:if>
+   			     <img src="fileadmin/{image.identifier}" class="responsive-img" alt="{image.alttxt}" />
+   			     <f:if condition="{image.ref_des} != ''"><span class="bildtext">{image.ref_des}</span></f:if>
+   			</div>
+    </f:for>
+	</f:if>
+	
+</div>

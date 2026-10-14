@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-19T09:32:46Z" product-name="crbuchkatalog">
+		<header/>
+		<body>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag">
+				<source>Eintrag</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.autor">
+				<source>Autor</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.veroeffentlichungsjahr">
+				<source>Veroeffentlichungsjahr</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.kurzbeschreibung">
+				<source>Kurzbeschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.pdf">
+				<source>Pdf</source>
+			</trans-unit>
+			<trans-unit id="tx_crbuchkatalog_domain_model_eintrag.schlagworte">
+				<source>Schlagworte</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

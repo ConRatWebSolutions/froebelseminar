@@ -1,0 +1,118 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <div class="module-docheader">
+        <div class="module-docheader-bar">
+            <div class="module-docheader-bar-column-left">
+                <h1 class="module-docheader-bar-title">Fahrtenbuch Eintrag bearbeiten</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="module-body">
+        <f:if condition="{msg} != ''">
+            <div class="alert alert-success">{msg}</div>
+        </f:if>
+        
+        <div <f:if condition="{hide} == '1'">style="display:none"</f:if>>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            <f:link.action arguments="{xuid: '{logbooks.uid}', data: 'delete'}" action="beedit" class="btn btn-danger">
+                                <span class="t3-icon t3-icon-actions t3-icon-actions-edit t3-icon-edit-delete"></span>
+                                Diesen Eintrag löschen
+                            </f:link.action>
+                            <f:link.action action="belistd" class="btn btn-warning">
+                                <span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-view"></span>
+                                Zurück zur Übersicht
+                            </f:link.action>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <h2>{user.name}</h2>
+            
+            <f:form id="myform" action="beedit" class="myform" name="dataSubmit" objectName="dataSubmit">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="datum">Datum *</label>
+                            <f:form.textfield id="datum" class="form-control" property="datum" value="<f:format.date format='d.m.Y'>{logbooks.datum}</f:format.date>" placeholder="01.01.2021" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fahrstrecke">gefahrene KM *</label>
+                            <f:form.textfield id="fahrstrecke" class="form-control" property="fahrstrecke" value="{logbooks.fahrstrecke}" placeholder="33" required="required" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="von">Abfahrt (von nach) *</label>
+                            <f:form.textfield id="von" class="form-control" property="von" value="{logbooks.von}" placeholder="Kassel" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="bis">Rückfahrt (von nach) *</label>
+                            <f:form.textfield id="bis" class="form-control" property="bis" value="{logbooks.bis}" placeholder="Korbach" required="required" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="start">Geschätzte Startzeit *</label>
+                            <f:form.textfield id="start" class="form-control" property="start" value="{logbooks.start}" placeholder="08:00" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ende">Geschätzte Rückkehrzeit *</label>
+                            <f:form.textfield id="ende" class="form-control" property="ende" value="{logbooks.ende}" placeholder="09:30" required="required" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="grund">Grund der Fahrt</label>
+                            <f:form.textfield id="grund" class="form-control" property="grund" value="{logbooks.grund}" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="bemerkung">Bemerkung</label>
+                            <f:form.textfield id="bemerkung" class="form-control" property="bemerkung" value="{logbooks.bemerkung}" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                
+                <f:form.hidden property="xuid" value="{logbooks.uid}" />
+                <f:form.hidden property="sents" value="1" />
+                <f:form.hidden property="user" value="{user.uid}" />
+                
+                <div class="form-group">
+                    <f:form.button property="saveit" id="saveTrigger" class="btn btn-success" value="1" type="submit">
+                        <span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-save"></span>
+                        Speichern
+                    </f:form.button>
+                </div>
+            </f:form>
+        </div>
+    </div>
+</f:section>
+</html>

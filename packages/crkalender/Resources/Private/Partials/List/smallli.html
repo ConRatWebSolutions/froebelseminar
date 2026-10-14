@@ -1,0 +1,39 @@
+
+ <table class="table table-hover"> 
+ 
+	<f:for each="{termins}" as="termin"> 
+	 			   <tr>
+				  <td>   
+				  	  <f:if condition="{termin.main.bis} != ''">
+				  		 	<f:then>
+				  		 	     <f:format.date format="d.m.">{termin.main.datum}</f:format.date> 
+				  		 	    - <f:format.date format="d.m.Y">{termin.main.bis}</f:format.date>
+				  		 	
+				  		 	</f:then>
+				  		 	<f:else>
+				  		 	    <f:format.date format="d.m.Y">{termin.main.datum}</f:format.date>
+				  		 	</f:else> 
+				  		 </f:if>
+				  	     <f:if condition="{termin.main.zeit} != '0'">{termin.main.zeit}</f:if>	
+				  		 <f:if condition="{termin.main.zeit} >  0  && {termin.main.bzeit} >  0 "><f:then> - </f:then><f:else><f:if condition="{termin.main.zeit} != '0'"> <small>Uhr</small> </f:if></f:else></f:if> 
+				         <f:if condition="{termin.main.bzeit} != '0'">{termin.main.bzeit} <small>Uhr</small> </f:if>	
+				  	
+				  </td>
+				  <td>
+				  <f:if condition="{termin.main.beschreibung} != ''">	
+				  	<f:then>
+				  	    <f:link.action class="" pageUid="{config.iddershowseite}" arguments="{uid: '{termin.main.uid}'}" action="detail" ><b>{termin.main.titel}</b></f:link.action>
+				  	</f:then>
+				  	<f:else>
+				  	     <b>{termin.main.titel}</b>
+				  	     
+				  	</f:else>  
+				  	</f:if> 
+				       <f:if condition="{termin.main.link} != ''">
+                          <a href="{termin.main.link}" class="btn btn-primary btn-termin" target="_blank">zur Anmeldung</a>
+                       </f:if>
+				  </td>
+				   
+				</tr>
+	</f:for>
+ </table>

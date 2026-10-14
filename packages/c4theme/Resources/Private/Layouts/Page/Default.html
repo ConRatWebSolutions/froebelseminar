@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="top"></div>
+<div class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+    
+    <div class="wrapper">
+        <f:render partial="Structure/HeaderContent" arguments="{_all}" />
+      
+        <main id="page-content" class="bp-page-content  main-section main">
+            <!--TYPO3SEARCH_begin-->
+            <div class="mainContent">
+                <f:render section="Main" />
+            </div>
+            <!--TYPO3SEARCH_end-->
+        </main>
+ 
+         
+    </div>
+    <f:render partial="Structure/FooterContent" arguments="{_all}" />
+
+</div>
+ 
+</html>

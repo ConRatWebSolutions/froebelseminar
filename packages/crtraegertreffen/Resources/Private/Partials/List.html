@@ -1,0 +1,93 @@
+<div style="text-align:right; padding-right: 15px;"> 
+ 
+	<f:if condition="{category} == 1">
+	 <f:then>
+		<a class="btn btn-success">Kassel</a>
+		<a class="btn btn-primary" href="/traegertreffen/korbach">Korbach</a>		 
+	 
+	 </f:then>
+	<f:else>
+		<a class="btn btn-primary" href="/traegertreffen">Kassel</a>
+		<a class="btn btn-success">Korbach</a>	
+	
+	</f:else>
+	
+</f:if>	 
+
+</div>		
+<div class="mmenus"> 
+		 <a class="btn btn-primary" onclick="show('all')">Alle</a>		 
+		 <f:for each="{pDFs.kat}" as="ktgri" iteration="number"> 
+		     <a class="btn btn-primary" onclick="show('kat_{ktgri.uid}')">{ktgri.kategorie}</a>
+		</f:for>
+ 			<f:link.action action="logouts" controller="PDF" class="btn btn-warning">Logout</f:link.action>
+
+</div>
+<div class="row">  
+	<div class="col-md-12">	   
+		<ul> 
+		<f:for each="{pDFs.pdfs}" as="pdfs" iteration="number"> 
+		
+			<f:if condition="{pdfs.show} != ''">
+			<f:then>
+					 <li class="pdfdownload  all kat_{pdfs.kategorie}" style="display:none">
+					 	
+					 	    <f:link.action action="show" class="showtraeger" pageUid="186" arguments="{uid: '{pdfs.uid}'}">{pdfs.titel}</f:link.action> 
+					 	   <f:if condition="{pdfs.youtube} != ''">
+					 	      <a href="{pdfs.youtube}" title="" class="popup-iframe popup-youtube" rel="lightbox[myImageSet]">Youtube</a>
+					 	   </f:if>
+						  <f:if condition="{pdfs.webseite} != ''">
+					 	         <a href="{pdfs.webseite}" class="homepagelink" target="_blank" title=""  >Zur Webseite</a>
+					 	   </f:if>
+					 	    <f:if condition="{pdfs.facebook} != ''">
+					 	     <a href="{pdfs.facebook}" class="fbpagelink" target="_blank" title=""  ></a>
+					 	   </f:if>		
+						  <f:if condition="{pdfs.instagram} != ''">
+					 	       <a href="{pdfs.instagram}" class="inpagelink" target="_blank" title=""  ></a>
+					 	   </f:if>			 	    	
+					 </li>			
+			</f:then>
+			<f:else>
+			  <f:if condition="{pdfs.titel} != ''">
+					 <li class="pdfdownload all kat_{pdfs.kategorie}" style="display:none">
+					 	
+					 	   <a href="fileadmin{pdfs.pdf.0.identifier}" target="_blank">{pdfs.titel}</a>
+					 	   <f:if condition="{pdfs.youtube} != ''">
+					 	      <a href="{pdfs.youtube}" title="" class="popup-iframe popup-youtube" rel="lightbox[myImageSet]">Youtube</a>
+					 	   </f:if>
+						  <f:if condition="{pdfs.webseite} != ''">
+					 	         <a href="{pdfs.webseite}" class="homepagelink" target="_blank" title=""  >Zur Webseite</a>
+					 	   </f:if>
+					 	    <f:if condition="{pdfs.facebook} != ''">
+					 	     <a href="{pdfs.facebook}" class="fbpagelink" target="_blank" title=""  ></a>
+					 	   </f:if>		
+						  <f:if condition="{pdfs.instagram} != ''">
+					 	       <a href="{pdfs.instagram}" class="inpagelink" target="_blank" title=""  ></a>
+					 	   </f:if>			 	    	
+					 </li>
+				</f:if>		 
+			</f:else>
+			 </f:if>			 
+		</f:for>
+		</ul>
+	
+	</div>
+	 
+</div>
+<script>
+    
+    $('.pdfdownload').hide();
+    
+    
+    
+	function show(a){
+		
+		$('.pdfdownload').hide();
+		$('.'+a).show();
+		
+	}
+	
+	
+</script>
+
+ 

@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-crbuchkatalog" >
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.titel" />
+		</td>
+		<td>
+		{eintrag.titel}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.autor" />
+		</td>
+		<td>
+		{eintrag.autor}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.veroeffentlichungsjahr" />
+		</td>
+		<td>
+		{eintrag.veroeffentlichungsjahr}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.kurzbeschreibung" />
+		</td>
+		<td>
+		{eintrag.kurzbeschreibung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.pdf" />
+		</td>
+		<td>
+				<a href="{eintrag.pdf.originalResource.publicUrl}">
+					{eintrag.pdf.originalResource.name}
+				</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crbuchkatalog_domain_model_eintrag.schlagworte" />
+		</td>
+		<td>
+		{eintrag.schlagworte}
+		</td>
+	</tr>
+</table>
+</html>

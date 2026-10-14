@@ -1,0 +1,15 @@
+
+plugin.tx_crkalender_crkalender {
+    view {
+        # cat=plugin.tx_crkalender_crkalender/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:crkalender/Resources/Private/Templates/
+        # cat=plugin.tx_crkalender_crkalender/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:crkalender/Resources/Private/Partials/
+        # cat=plugin.tx_crkalender_crkalender/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:crkalender/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_crkalender_crkalender//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

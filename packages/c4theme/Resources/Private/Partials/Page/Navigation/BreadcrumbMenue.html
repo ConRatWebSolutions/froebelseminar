@@ -1,0 +1,39 @@
+
+<f:if condition="{breadcrumb}">
+    <f:spaceless>
+    	<div class="page-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+				        <ol class="breadcrumb">
+							<li><i class="fa fa-home pr-10"></i><a href="/" title=" Willkommen">Home</a></li>
+				            <f:for each="{breadcrumb}" as="menuItem" iteration="menuIterator">
+				                <f:if condition="{menuIterator.isFirst}">
+				                    <f:then>
+				                       <li> 
+				                        	<a href="{menuItem.link}" title="{f:translate(key: 'menu.breadcrumb.title', extensionName: 'threeme')} {menuItem.data.title}">{menuItem.title}</a>
+				                        </li>
+				                    </f:then>
+				                    <f:else>
+			                            <f:if condition="{menuItem.current}">
+			                                <f:then>
+			                        			<li class="active">
+			                                   		{menuItem.title}
+			                                   	</li>
+			                                </f:then>
+			                                <f:else>
+			                                	<li>
+			                                    	<a href="{menuItem.link}" title="">{menuItem.title}</a>
+			                        			</li>
+			                                </f:else>
+			                            </f:if>
+				                    </f:else>
+				                </f:if>
+				            </f:for>
+				        </ol>
+				    </div>
+				</div>
+			</div>
+		</div>
+    </f:spaceless>
+</f:if>

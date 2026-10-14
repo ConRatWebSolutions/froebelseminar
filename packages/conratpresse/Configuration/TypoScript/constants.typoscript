@@ -1,0 +1,15 @@
+
+plugin.tx_conratpresse_conratpresse {
+    view {
+        # cat=plugin.tx_conratpresse_conratpresse/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:conratpresse/Resources/Private/Templates/
+        # cat=plugin.tx_conratpresse_conratpresse/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:conratpresse/Resources/Private/Partials/
+        # cat=plugin.tx_conratpresse_conratpresse/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:conratpresse/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_conratpresse_conratpresse//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

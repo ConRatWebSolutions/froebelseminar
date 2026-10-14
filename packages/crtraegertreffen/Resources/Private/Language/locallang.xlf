@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:crtraegertreffen/Resources/Private/Language/locallang" date="2020-10-22T13:33:06Z" product-name="crtraegertreffen">
+		<header/>
+		<body>
+			<trans-unit id="tx_crtraegertreffen_domain_model_kategorie" resname="tx_crtraegertreffen_domain_model_kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_kategorie.kategorie" resname="tx_crtraegertreffen_domain_model_kategorie.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf" resname="tx_crtraegertreffen_domain_model_pdf">
+				<source>P D F</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.titel" resname="tx_crtraegertreffen_domain_model_pdf.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.pdf" resname="tx_crtraegertreffen_domain_model_pdf.pdf">
+				<source>Pdf</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.youtube" resname="tx_crtraegertreffen_domain_model_pdf.youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.webseite" resname="tx_crtraegertreffen_domain_model_pdf.webseite">
+				<source>Webseite</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.facebook" resname="tx_crtraegertreffen_domain_model_pdf.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.instagram" resname="tx_crtraegertreffen_domain_model_pdf.instagram">
+				<source>Instagram</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.kategorie" resname="tx_crtraegertreffen_domain_model_pdf.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag" resname="tx_crtraegertreffen_domain_model_eintrag">
+				<source>Eintrag</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.name" resname="tx_crtraegertreffen_domain_model_eintrag.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.anschrift" resname="tx_crtraegertreffen_domain_model_eintrag.anschrift">
+				<source>Anschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.telefon" resname="tx_crtraegertreffen_domain_model_eintrag.telefon">
+				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.email" resname="tx_crtraegertreffen_domain_model_eintrag.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.web" resname="tx_crtraegertreffen_domain_model_eintrag.web">
+				<source>Web</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.zielgruppe" resname="tx_crtraegertreffen_domain_model_eintrag.zielgruppe">
+				<source>Zielgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.angebotsformen" resname="tx_crtraegertreffen_domain_model_eintrag.angebotsformen">
+				<source>Angebotsformen</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.schwerpunkte" resname="tx_crtraegertreffen_domain_model_eintrag.schwerpunkte">
+				<source>Schwerpunkte</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.ansprechpartner" resname="tx_crtraegertreffen_domain_model_eintrag.ansprechpartner">
+				<source>Ansprechpartner</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.sonstiges" resname="tx_crtraegertreffen_domain_model_eintrag.sonstiges">
+				<source>Sonstiges</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.aptelefon" resname="tx_crtraegertreffen_domain_model_eintrag.aptelefon">
+				<source>Aptelefon</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.apemail" resname="tx_crtraegertreffen_domain_model_eintrag.apemail">
+				<source>Apemail</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.apkontankt" resname="tx_crtraegertreffen_domain_model_eintrag.apkontankt">
+				<source>Apkontankt</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.praktikum" resname="tx_crtraegertreffen_domain_model_eintrag.praktikum">
+				<source>Praktikum</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.facebook" resname="tx_crtraegertreffen_domain_model_eintrag.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.logo" resname="tx_crtraegertreffen_domain_model_eintrag.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.logourl" resname="tx_crtraegertreffen_domain_model_eintrag.logourl">
+				<source>Logourl</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.instagram" resname="tx_crtraegertreffen_domain_model_eintrag.instagram">
+				<source>Instagram</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.youtube" resname="tx_crtraegertreffen_domain_model_eintrag.youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.kategorie" resname="tx_crtraegertreffen_domain_model_eintrag.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.standort" resname="tx_crtraegertreffen_domain_model_eintrag.standort">
+				<source>Standort</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_standort" resname="tx_crtraegertreffen_domain_model_standort">
+				<source>Standort</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_standort.titel" resname="tx_crtraegertreffen_domain_model_standort.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_eintrag.socialmedia" resname="tx_crtraegertreffen_domain_model_eintrag.socialmedia">
+				<source>Socialmedia</source>
+			</trans-unit>
+			<trans-unit id="tx_crtraegertreffen_domain_model_pdf.youtubelink" resname="tx_crtraegertreffen_domain_model_pdf.youtubelink">
+				<source>Youtubelink</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,11 @@
+#!/bin/bash
+# Live-Server Fröbelseminar / Familienzentrum – Zugänge im Obsidian-Vault Froebelseminar.
+# DB-Zugangsdaten bleiben auf dem Server (~/typo3_2025/.env.live) und werden dort gelesen.
+
+target=(
+   [sshUser]=ssh-243515-froebel
+   [sshHost]=froebelseminar.de
+   [sshPort]=22
+   [remoteBaseDir]=/typo3_2025
+   [remotePhp]=/usr/bin/php83
+)

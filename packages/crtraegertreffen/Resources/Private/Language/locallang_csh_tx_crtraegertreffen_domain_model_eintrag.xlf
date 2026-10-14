@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:crtraegertreffen/Resources/Private/Language/locallang_csh" date="2020-10-22T13:33:06Z" product-name="crtraegertreffen">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="anschrift.description" resname="anschrift.description">
+				<source>anschrift</source>
+			</trans-unit>
+			<trans-unit id="telefon.description" resname="telefon.description">
+				<source>telefon</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="web.description" resname="web.description">
+				<source>web</source>
+			</trans-unit>
+			<trans-unit id="zielgruppe.description" resname="zielgruppe.description">
+				<source>zielgruppe</source>
+			</trans-unit>
+			<trans-unit id="angebotsformen.description" resname="angebotsformen.description">
+				<source>angebotsformen</source>
+			</trans-unit>
+			<trans-unit id="schwerpunkte.description" resname="schwerpunkte.description">
+				<source>schwerpunkte</source>
+			</trans-unit>
+			<trans-unit id="ansprechpartner.description" resname="ansprechpartner.description">
+				<source>ansprechpartner</source>
+			</trans-unit>
+			<trans-unit id="sonstiges.description" resname="sonstiges.description">
+				<source>sonstiges</source>
+			</trans-unit>
+			<trans-unit id="aptelefon.description" resname="aptelefon.description">
+				<source>aptelefon</source>
+			</trans-unit>
+			<trans-unit id="apemail.description" resname="apemail.description">
+				<source>apemail</source>
+			</trans-unit>
+			<trans-unit id="apkontankt.description" resname="apkontankt.description">
+				<source>apkontankt</source>
+			</trans-unit>
+			<trans-unit id="praktikum.description" resname="praktikum.description">
+				<source>praktikum</source>
+			</trans-unit>
+			<trans-unit id="facebook.description" resname="facebook.description">
+				<source>facebook</source>
+			</trans-unit>
+			<trans-unit id="logo.description" resname="logo.description">
+				<source>logo</source>
+			</trans-unit>
+			<trans-unit id="logourl.description" resname="logourl.description">
+				<source>logourl</source>
+			</trans-unit>
+			<trans-unit id="instagram.description" resname="instagram.description">
+				<source>instagram</source>
+			</trans-unit>
+			<trans-unit id="youtube.description" resname="youtube.description">
+				<source>youtube</source>
+			</trans-unit>
+			<trans-unit id="kategorie.description" resname="kategorie.description">
+				<source>kategorie</source>
+			</trans-unit>
+			<trans-unit id="standort.description" resname="standort.description">
+				<source>standort</source>
+			</trans-unit>
+			<trans-unit id="socialmedia.description" resname="socialmedia.description">
+				<source>socialmedia</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,15 @@
+
+plugin.tx_crtraegertreffen_crtraegertreffen {
+    view {
+        # cat=plugin.tx_crtraegertreffen_crtraegertreffen/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:crtraegertreffen/Resources/Private/Templates/
+        # cat=plugin.tx_crtraegertreffen_crtraegertreffen/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:crtraegertreffen/Resources/Private/Partials/
+        # cat=plugin.tx_crtraegertreffen_crtraegertreffen/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:crtraegertreffen/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_crtraegertreffen_crtraegertreffen//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

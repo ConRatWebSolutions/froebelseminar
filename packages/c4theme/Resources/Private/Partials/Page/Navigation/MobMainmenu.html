@@ -1,0 +1,17 @@
+<ul class="nav">
+    <f:for each="{crmainmenu}" as="menu">
+      <li class="dropdown">
+       <a class="nav-link active" aria-current="page" href="{menu.link}">{menu.title}</a>
+       
+       <f:if condition="{menu.children}">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><b class="caret"></b></a>
+         <ul class="nav-ebene-zwei">
+             <f:for each="{menu.children}" as="children">
+                 <li><a href="{children.link}" title="{children.title}" class="{f:if(condition:'{children.active}',then:'active')}" >{children.title}</a></li>
+             </f:for>
+         </ul>
+     </f:if>
+     </li>
+        
+    </f:for>
+</ul>

@@ -1,0 +1,118 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{mainnavigation}">
+    <f:spaceless>
+        <div class="main-navigation animated">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#navbar-collapse-1">
+                            <span class="sr-only">
+                                <f:translate key='toglebar' extensionName='drc_templates' />
+                            </span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right vertical-menu">
+                            <f:for each="{mainnavigation}" as="menuItem" iteration="menuIterator">
+                                <li id="navbar{menuItem.data.uid}"
+                                    class="dropdown {f:if(condition:'{menuItem.active}', then: 'active')} {f:if(condition:'{menuItem.data.doktype}==4', then: 'mega-menu')}">
+
+                                    <f:if condition="{rootpages}==83">
+                                        <f:then>
+                                            <a href="{menuItem.link}" title="{menuItem.data.title}" target="_self"
+                                                class="dropdown-toggle" data-toggle="dropdown">{menuItem.title}</a>
+                                        </f:then>
+                                        <f:else>
+                                            <a href="{menuItem.link}" title="{menuItem.data.title}"
+                                                target="{f:if(condition:'{menuItem.target}', then:'{menuItem.target}', else:'_top')}"
+                                                class="dropdown-toggle" data-toggle="dropdown">{menuItem.title}</a>
+                                        </f:else>
+                                    </f:if>
+
+                                    <f:if condition="{menuItem.children} && {menuItem.data.doktype}==4">
+                                        <f:then>
+                                            <f:render section="mega-sub"
+                                                arguments="{rootpages:rootpages, item:menuItem,ulClass:'dropdown-menu',subTotal:'{menuItem.children -> f:count()}'}" />
+                                        </f:then>
+                                        <f:else>
+                                            <f:render section="simple-sub"
+                                                arguments="{rootpages:rootpages, item:menuItem,ulClass:'dropdown-menu'}" />
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </f:spaceless>
+
+    <f:section name="mega-sub">
+        <ul class="dropdown-menu">
+            <li>
+                <div class="row">
+                    <f:for each="{item.children}" as="child">
+                        <div class="{f:if(condition:'{subTotal}<=3', then: 'col-sm-4',else:'col-sm-3')}">
+                            <h4>
+                                <f:if condition="{rootpages}==83">
+                                    <f:then>
+                                        <a href="{child.link}" title="{child.data.title}"
+                                            target="_self">{child.title}</a>
+                                    </f:then>
+                                    <f:else>
+                                        <a href="{child.link}" title="{child.data.title}"
+                                            target="{f:if(condition:'{child.target}', then:'{child.target}', else:'_top')}">{child.title}</a>
+                                    </f:else>
+                                </f:if>
+                            </h4>
+                            <f:if condition="{child.children">
+                                <div class="divider"></div>
+                                <f:render section="simple-sub"
+                                    arguments="{rootpages:rootpages, item:child,ulClass:'menu'}" />
+                            </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </li>
+        </ul>
+    </f:section>
+
+    <f:section name="simple-sub">
+        <ul class="{ulClass}">
+            <f:for each="{item.children}" as="child">
+                <li class="{f:if(condition:'{child.active}', then: 'active')}">
+
+                    <f:if condition="{rootpages}==83">
+                        <f:then>
+                            <f:if condition="{child.data.uid}==78">
+                                <f:then>
+                                    <a href="{child.link}" title="{child.data.title}">{child.title}</a>
+                                </f:then>
+                                <f:else>
+                                    <a href="{child.link}" title="{child.data.title}" target="_self">{child.title}</a>
+                                </f:else>
+                            </f:if>
+
+                        </f:then>
+                        <f:else>
+                            <a href="{child.link}" title="{child.data.title}"
+                                target="{f:if(condition:'{child.target}', then:'{child.target}', else:'_top')}">{child.title}</a>
+                        </f:else>
+                    </f:if>
+
+
+
+                </li>
+            </f:for>
+        </ul>
+    </f:section>
+</f:if>
+
+</html>

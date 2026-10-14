@@ -1,0 +1,19 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Conrat\Conratpresse\:
+    resource: '../Classes/*'
+    exclude:
+      - '../Classes/Domain/Model/*'
+
+  Conrat\Conratpresse\Controller\:
+    resource: '../Classes/Controller/'
+    public: true
+    tags: ['controller.service_arguments']
+
+  Conrat\Conratpresse\Domain\Repository\:
+    resource: '../Classes/Domain/Repository/'
+    public: true

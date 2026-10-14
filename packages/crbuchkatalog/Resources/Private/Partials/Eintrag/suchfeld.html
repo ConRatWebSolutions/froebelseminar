@@ -1,0 +1,42 @@
+
+
+<div class="crrow">
+	<a id="showsuche"   class="pull-right"><i id="searchbnt" class="fa fa-search-plus"></i></a>
+</div>
+ 
+<div class="crrow"  >
+     <f:form object="{suche}"  style="display:none" id="formulara" action="list" class="dbox" name="dataSubmit"  objectName="dataSubmit"  >
+
+		<div class="row">
+			<div class="form-group col-lg-12">
+				<label for="volltext">Volltext</label>
+				<f:form.textfield id="volltext"  class="form-control" property="volltext" value="{suche.volltext}" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-lg-6">
+				<label for="autor">Autor</label>
+				<f:form.textfield id="autor"  class="form-control" property="autor" value="{suche.autor}" />
+			</div>
+			<div class="form-group col-lg-6" >
+				<label for="jahr">Jahr</label>
+				<f:form.textfield id="jahr"  class="form-control" property="jahr" value="{suche.jahr}" />
+			</div>	
+		</div>	 		
+	 
+	<f:form.hidden property="sent" value="1" />
+	
+	<f:form.button property="saveit" id="saveTrigger" class="btn btnn btn-success" value="1" type="submit"><i class="fa fa-search " aria-hidden="true"></i> Suchen</f:form.button> 
+ 	<f:form.button property="delit" id="delTrigger" class="btn btnn btn-warning" value="1" type="submit"><i class="fa fa-trash " aria-hidden="true"></i> Suche löschen</f:form.button> 	
+ 
+   </f:form>
+</div>
+<f:if condition='{suche}!=""'>
+<div class="crrow">
+	<div class="tx-indexedsearch-info-sword">
+		 Suche nach&nbsp;<strong>{suche.volltext} {suche.autor} {suche.jahr}</strong>
+	 </div> 
+</div>
+ </f:if> 
+ 
+ 

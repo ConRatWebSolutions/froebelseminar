@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-28T10:19:50Z" product-name="conratpresse">
+		<header/>
+		<body>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel">
+				<source>Presseartikel</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.uberschrift">
+				<source>Uberschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.datum">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.anleser">
+				<source>Anleser</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.pdf">
+				<source>Pdf</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.externerlink">
+				<source>Externerlink</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_presseartikel.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_domain_model_kategorie.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_conratpresse.name">
+				<source>ConRat Presse</source>
+			</trans-unit>
+			<trans-unit id="tx_conratpresse_conratpresse.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

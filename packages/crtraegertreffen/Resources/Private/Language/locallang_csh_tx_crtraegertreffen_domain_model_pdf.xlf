@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:crtraegertreffen/Resources/Private/Language/locallang_csh" date="2020-10-22T13:33:06Z" product-name="crtraegertreffen">
+		<header/>
+		<body>
+			<trans-unit id="titel.description" resname="titel.description">
+				<source>titel</source>
+			</trans-unit>
+			<trans-unit id="pdf.description" resname="pdf.description">
+				<source>pdf</source>
+			</trans-unit>
+			<trans-unit id="youtube.description" resname="youtube.description">
+				<source>youtube</source>
+			</trans-unit>
+			<trans-unit id="webseite.description" resname="webseite.description">
+				<source>webseite</source>
+			</trans-unit>
+			<trans-unit id="facebook.description" resname="facebook.description">
+				<source>facebook</source>
+			</trans-unit>
+			<trans-unit id="instagram.description" resname="instagram.description">
+				<source>instagram</source>
+			</trans-unit>
+			<trans-unit id="kategorie.description" resname="kategorie.description">
+				<source>kategorie</source>
+			</trans-unit>
+			<trans-unit id="youtubelink.description" resname="youtubelink.description">
+				<source>youtubelink</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

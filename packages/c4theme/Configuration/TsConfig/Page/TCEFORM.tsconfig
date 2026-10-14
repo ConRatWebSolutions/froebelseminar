@@ -1,0 +1,36 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+         header_class{
+            addItems {
+                     
+                    h2BorderBottom = mit Untertrich
+                }
+        },
+  
+        frame_class {
+            addItems {
+                    teaser-1 = Card Bild im Hintergrund 
+                    teaser-2 = Card Menü
+                    teaser-3 = Card Nachricht
+                    teaser-4 = Bild rund
+                    teaser-5 = Bild rund klein
+                    teaser-6 = Card mit Tour
+                }
+        }
+   }
+ 
+
+}
+  tx_news.templateLayouts {
+        1 = News 
+        2 = Liste
+        3 = Card
+        4 = Slider
+        5 = Veranstaltung
+}

@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+		<f:if condition="{containers} == 1">
+			<f:then>
+				<div class="main-container" style="margin-top: 0px;">
+					<div class="container">
+						<div class="row">
+							<div class="main col-md-12">
+								<f:render partial="Termin/ShowImagesRight" arguments="{termin:termin, bilder:bilder}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</f:then>
+			<f:else>
+				<f:render partial="Termin/ShowImagesRight" arguments="{termin:termin, bilder:bilder}" />
+			</f:else>
+		</f:if>
+	</f:section>
+</html>

@@ -1,0 +1,102 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+ 	<link rel="stylesheet" type="text/css" href="https://cdn.crweb.solutions/bootstrap/3/latest.min.css" media="all"> 
+ 
+<div style="height:100%;overflow-y: scroll; margin:15px auto"> 		
+ <div class="col-lg-offset-1 col-lg-10" >  
+ 
+ <f:if condition="{msg} != ''"><div class="alert alert-success" > {msg} </div></f:if>  
+ <div <f:if condition="{hide} == '1'">style="display:none"</f:if>>
+ 	
+ 	<f:link.action   arguments="{xuid: '{logbooks.uid}', data: 'delete'}" action="beedit" class="btn btnn btn-danger pull-right" > Diesen Eintrag löschen</f:link.action>
+ 	<br><br>
+ 	
+ 	 
+ 	<h2>  {user.name }  </h2>
+	<f:form   id="myform" action="beedit" class="myform" name="dataSubmit" objectName="dataSubmit"   >
+ 	
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Datum *</label>
+						<f:form.textfield id="datum" class="form-control checkInput" property="datum" value="<f:format.date format='d.m.Y'>{logbooks.datum}</f:format.date>" placeholder="01.01.2021" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">gefahrene KM  *</label>
+						<f:form.textfield id="fahrstrecke" class="form-control checkInput" property="fahrstrecke" value="{logbooks.fahrstrecke}" placeholder="33" required="required" />  
+					</div>
+				</div>				
+		  </div>
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Abfahrt (von nach) *</label>
+						<f:form.textfield id="von" class="form-control checkInput" property="von" value="{logbooks.von}" placeholder="Kassel" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Rückfahrt (von nach) *</label>
+						<f:form.textfield id="bis" class="form-control checkInput" property="bis" value="{logbooks.bis}" placeholder="Korbach" required="required" />
+					</div>
+				</div>				
+			</div>			
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Startzeit *</label>
+						<f:form.textfield id="start" class="form-control checkInput" property="start" value="{logbooks.start}" placeholder="08:00" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Rückkehrzeit *</label>
+						<f:form.textfield id="ende" class="form-control checkInput" property="ende" value="{logbooks.ende}" placeholder="09:30" required="required" />
+					</div>
+				</div>				
+			</div> 	
+ 		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Grund der Fahrt</label>
+						<f:form.textfield id="grund" class="form-control checkInput" property="grund" value="{logbooks.grund}" placeholder="" />
+					</div>
+				</div>
+		  </div>			
+  		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Bemerkung</label>
+						<f:form.textfield id="bemerkung" class="form-control checkInput" property="bemerkung" value="{logbooks.bemerkung}" placeholder="" />
+					</div>
+				</div>
+		  </div>
+		  <f:form.hidden property="xuid" value="{logbooks.uid}" />
+		   <f:form.hidden property="sents" value="1" />
+		  <f:form.hidden property="user" value="{user.uid}" />
+		  <f:form.button property="saveit" id="saveTrigger" class="btn btnn btn-success" value="1" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Speichern</f:form.button> 	
+ 	</f:form>
+  
+ 
+  </div>
+  <f:link.action  action="belistd" class="btn btnn btn-warning pull-right" > zurück zur Übersicht</f:link.action>
+  </div>
+ </div>
+
+	</f:section>
+</html>

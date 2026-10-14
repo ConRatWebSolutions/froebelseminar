@@ -1,0 +1,250 @@
+.stellarnav {position: relative; width: 100%; z-index: 9900; line-height: normal; padding:10; margin:0}
+.stellarnav ul { padding:10px 0; margin:0}
+.stellarnav ul ul { background: rgba(255, 255, 255, 1); }
+.stellarnav li { list-style: none; display: block; margin-left: 10px; padding: 0; position: relative; line-height: normal; vertical-align: middle; }
+.stellarnav li a {    
+		display: block;
+		text-decoration: none;
+		box-sizing: border-box;
+		padding:  7px ;
+		font-size: 21px;
+		font-weight: normal;
+		color: #3a3a3a;
+	 
+	}
+
+.stellarnav li a:hover, .stellernav .active{
+	text-decoration: underline !important;
+} 
+
+	
+/* main level */
+.stellarnav > ul > li { display: inline-block; }
+
+/* first level dd */
+.stellarnav ul ul {  margin-top: 0px; top: auto; width: 270px; position: absolute; z-index: 9900; text-align: left; display: none; background: #fff; }
+.stellarnav li li { display: block; border-bottom: 1px solid #e4e4e4; }
+
+/* second level dd */
+.stellarnav ul ul ul { top: 0; /* dd animtion - change to auto to remove */ left: 270px; }
+.stellarnav > ul > li:hover > ul > li:hover > ul { opacity: 1; visibility: visible; top: 0; }
+.stellarnav ul ul a {color:#999999 !important; font-size:18px}
+.stellarnav li li li{   border-left: 1px solid #e4e4e4; }
+
+
+/* .drop-left */
+.stellarnav > ul > li.drop-left > ul { right: 0; }
+.stellarnav li.drop-left ul ul { left: auto; right: 220px; }
+
+/* light theme */
+ 
+    
+.stellarnav.light .menu-toggle { color:  #045a93; }
+
+
+/* sticky nav */ 
+.stellarnav.fixed { position: fixed; width: 100%; top: 0; left: 0; z-index: 9999; }
+
+/* only used when 'scrollbarFix' is set to true in the js. This fixes horizontal scrollbar caused by the dd menus that are very long.*/
+body.stellarnav-noscroll-x { overflow-x: hidden; }
+
+/* general styling */
+ 
+.stellarnav .menu-toggle, .stellarnav .close-menu { display: none; text-transform: uppercase; text-decoration: none; }
+.stellarnav .call-btn-mobile { display: none; }
+.stellarnav .dd-toggle { display: none; position: absolute; top: 0; right: 0; padding: 0; width: 48px; height: 48px; text-align: center; z-index: 9999; border: 0; }
+.stellarnav .dd-toggle i { position: absolute; margin: auto; top: 33%; left: 0; right: 0; -webkit-transition: transform .3s ease-out; -moz-transition: transform .3s ease-out; transition: transform .3s ease-out; }
+.stellarnav.mobile > ul > li > a.dd-toggle { padding: 0; }
+.stellarnav li.call-btn-mobile, .stellarnav li.call-btn-location { display: none; }
+.stellarnav li.open > a.dd-toggle i { -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); -o-transform: rotate(135deg); transform: rotate(135deg); }
+
+/* Fallback for slow javascript */
+@media only screen and (max-width : 991px) {
+	.stellarnav { overflow: hidden; display: block; }
+	.stellarnav ul { position: relative; display: none; margin-top:55px !important;  padding-top: 25px;}
+	
+	.stellarnav ul .has-sub ul { margin-top:0 !important}
+	
+}
+
+/* mobile nav */
+.stellarnav .menu-toggle { color: #777; padding: 15px; float:right; font-size: 33px;}
+.stellarnav.mobile { position: static; }
+.stellarnav.mobile.fixed { position: static; }
+.stellarnav.mobile ul { position: relative; display: none; }
+.stellarnav.mobile.active { padding-bottom: 0; }
+.stellarnav.mobile.active > ul { display: block; }
+.stellarnav.mobile ul { text-align: left; }
+.stellarnav.mobile > ul > li { display: block; border-bottom: 2px solid #fff; }
+.stellarnav.mobile > ul > li > a { padding: 15px; }
+.stellarnav.mobile ul { background: rgba(221, 221, 221, 1); }
+.stellarnav.mobile ul ul { position: relative; opacity: 1; visibility: visible; width: auto; display: none; -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none; }
+.stellarnav.mobile ul ul ul { left: auto; top: auto; }
+.stellarnav.mobile li.drop-left ul ul { right: auto; }
+.stellarnav.mobile li a { border-bottom: 1px solid rgba(255, 255, 255, .15); }
+.stellarnav.mobile li.has-sub a { padding-right: 50px; }
+.stellarnav.mobile.light li a { border-bottom: 1px solid rgba(0, 0, 0, .15); }
+.stellarnav.mobile li a.dd-toggle { border: 0; } 
+.stellarnav.mobile.light li a.dd-toggle { border: 0; }
+.stellarnav.mobile .menu-toggle, .stellarnav.mobile .dd-toggle, .stellarnav.mobile .close-menu  { display: block; }
+.stellarnav.mobile li.call-btn-mobile { border-right: 1px solid rgba(255, 255, 255, .1); box-sizing: border-box; }
+.stellarnav.mobile li.call-btn-mobile, .stellarnav.mobile li.call-btn-location { display: inline-block; width: 50%; text-transform: uppercase; text-align: center; }
+.stellarnav.mobile li.call-btn-mobile.full, .stellarnav.mobile li.call-btn-location.full { display: block; width: 100%; text-transform: uppercase; border-right: 0; text-align: left; }
+.stellarnav.mobile li.call-btn-mobile i, .stellarnav.mobile li.call-btn-location i { margin-right: 5px; }
+.stellarnav.mobile.light ul { background: rgba(255, 255, 255, 1); }
+.stellarnav.mobile.dark ul { background: rgba(0, 0, 0, 1); }
+.stellarnav.mobile.dark ul ul { background: rgba(255, 255, 255, .08); }
+.stellarnav.mobile.light li.call-btn-mobile { border-right: 1px solid rgba(0, 0, 0, .1); }
+.stellarnav.mobile.top { position: relative; width: 100%; top: 0; left: 0; z-index: 9999; }
+.stellarnav.mobile li.has-sub > a:after, .stellarnav.mobile li li.has-sub > a:after, .stellarnav.mobile li.drop-left li.has-sub > a:after { display: none; }
+/* mobile nav */
+
+ 
+
+.breadcrumb {  padding:  5px 0; margin:0}
+
+@media (max-width : 1200px) {
+
+	.stellarnav li a {    
+			padding: 32px 7px 0 7px;
+			font-size: 19px;
+		}
+
+}
+
+
+.footernav, .footernav ul {
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				width: 65%;
+}
+.footernav li { list-style-type:  none;margin: 0 ; padding:0; float: left}
+.footernav a {
+    display: block;
+     padding: 0 15px 0 10px;
+     color:#fff 
+}
+ 
+
+.bars {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.bars span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation für das Burger-Menü */
+.bars.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bars.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.bars.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menü Container */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    padding: 60px 20px 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 9998;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Menü-Items */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin: 15px 0;
+}
+
+.mobile-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a:hover {
+    color: #045a93;
+}
+
+/* Overlay für den Hintergrund */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 9997;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 999px) {
+    .bars {
+        display: block;
+    }
+
+	.close-menu {
+		padding: 8px 15px;
+		background: #eee;
+		text-align: right;
+	  }
+}
+
+@media (min-width: 1000px) {
+    .bars {
+        display: none;
+    }
+} 
+ 
+.breadcrumb li {
+	float: left;
+	width: auto;
+	padding-right: 8px;
+  }
+.breadcrumb > li + li::before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+  }

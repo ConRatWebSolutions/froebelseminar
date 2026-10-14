@@ -1,0 +1,85 @@
+
+# Plugin-Registrierung für TYPO3 v13
+tt_content.list.20.crkalender_crkalender = USER
+tt_content.list.20.crkalender_crkalender {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    vendorName = Conrat
+    extensionName = Crkalender
+    pluginName = Crkalender
+    controller = Eintrag
+    action = list
+    switchableControllerActions {
+        Eintrag {
+            1 = list
+            2 = show
+            3 = new
+            4 = create
+            5 = edit
+            6 = update
+            7 = delete
+        }
+        Kategorie {
+            1 = list
+            2 = show
+        }
+    }
+}
+
+plugin.tx_crkalender_crkalender {
+    view {
+        templateRootPaths.0 = EXT:crkalender/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_crkalender_crkalender.view.templateRootPath}
+        partialRootPaths.0 = EXT:crkalender/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_crkalender_crkalender.view.partialRootPath}
+        layoutRootPaths.0 = EXT:crkalender/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_crkalender_crkalender.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_crkalender_crkalender.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# these classes are only used in auto-generated templates
+plugin.tx_crkalender._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-crkalender table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-crkalender table th {
+        font-weight:bold;
+    }
+
+    .tx-crkalender table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)

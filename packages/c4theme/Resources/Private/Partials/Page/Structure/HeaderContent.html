@@ -1,0 +1,117 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="header-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2 col-sm-6">
+				<f:comment>
+				<!-- header-top-first start -->
+				<!-- ================ -->
+			</f:comment>
+				<f:if condition="{settings.fblink}"> 
+					<div class="header-top-first clearfix">
+						<ul class="social-links clearfix hidden-xs">
+							<li class="facebook"><f:link.external uri="{settings.fblink}" target="_blank" title="{siteTitle}"><i class="fa fa-facebook"></i></f:link.external></li>
+						    <li class="instagram"><f:link.external uri="https://www.instagram.com/ev.froebelseminar/" target="_blank" title="{settings.siteTitle}"><i class="fa fa-instagram"></i></f:link.external></li>
+						</ul>
+						<div class="social-links hidden-lg hidden-md hidden-sm">
+							<div class="btn-group dropdown">
+								<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i></button>
+								<ul class="dropdown-menu dropdown-animation">
+									<li class="facebook"><f:link.external uri="{settings.fblink}" target="_blank" title="{siteTitle}"><i class="fa fa-facebook"></i></f:link.external></li>
+								 	<li class="instagram"><f:link.external uri="https://www.instagram.com/ev.froebelseminar/" target="_blank" title="{settings.siteTitle}"><i class="fa fa-instagram"></i></f:link.external></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</f:if>
+				<f:comment>
+				<!-- header-top-first end -->
+				</f:comment>
+			</div>
+			<div class="col-xs-10 col-sm-6">
+				<f:comment>
+					<!-- header-top-second start -->
+					<!-- ================ -->
+				</f:comment>
+				<div id="header-top-second"  class="clearfix">
+					<div class="header-top-dropdown">
+	                    <div class="btn-group dropdown top-tel">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-phone"></i>  Telefon </button>
+							<ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+								<li>
+									<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0',pageUid:'74'}" />
+								</li>
+							</ul>
+						</div>
+                        <div class="btn-group dropdown">
+                         	<f:render partial="Navigation/TopMenue" arguments="{topInternNav:topInternNav}"/>
+						</div>
+						<div class="btn-group dropdown" style="display: none;">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">&nbsp; Suche</button>
+							<ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+								<li>
+									 
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<f:comment>
+					<!-- header-top-second end -->
+				</f:comment>
+			</div>
+		</div>
+	</div>
+</div>
+<f:comment>
+<!-- header-top end -->
+
+<!-- header start classes:
+	fixed: fixed navigation mode (sticky menu) e.g. <header class="header fixed clearfix">
+	 dark: dark header version e.g. <header class="header dark clearfix">
+================ -->
+</f:comment>
+
+<header class="header fixed clearfix">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 header-hleft">
+				<f:comment>
+				<!-- header-left start -->
+				<!-- ================ -->
+				</f:comment>
+				<div class="header-left clearfix">
+
+					<!-- logo -->
+					<div class="logo">
+						<a href="/">
+							 
+								<img src="/fileadmin/images/f-logo2.png" id="logo" alt="{settings.siteTitle}"/>
+							 
+						</a>
+					</div>
+				</div>
+				<f:comment>
+				<!-- header-left end -->
+				</f:comment>
+			</div>
+			<div class="col-md-9 header-hright">
+				<f:comment>
+					<!-- header-right start -->
+					<!-- ================ -->
+				</f:comment>
+				<div class="header-right clearfix">
+					<f:render partial="Navigation/MainMenue" arguments="{mainnavigation:mainnavigation, rootpages:settings.rootpage}" />
+					 
+				</div>
+				<f:comment>
+					<!-- header-right end -->
+				</f:comment>
+			</div>
+		</div>
+	</div>
+</header>
+ 
+ 
+</html>

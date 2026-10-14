@@ -1,0 +1,217 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+ 
+    <f:flashMessages />
+  <div class="container">
+		<div class="row">
+			<div class="main col-md-12">
+				  
+			 <h2>{eintrag.name}</h2>	    
+				 
+ 	 
+ 	
+ 	
+ 	 <div class="row">
+ 		<div class="col-md-8"> 
+		 
+				
+		 	
+		 <div class="formrow">		
+	     <h2>Adresse</h2>	
+			<div class="form-group">
+						{eintrag.name} <br>
+						{eintrag.anschrift}<br>
+						<br>
+						{eintrag.telefon}<br>
+						{eintrag.email}
+			
+			
+			<f:if condition="{eintrag.web} != ''"><br><br><a href="{eintrag.web}" target="_blank">zur Homepage</a> </f:if>
+							 
+			</div>		 
+		 			
+		  
+ 			
+			
+		  </div>
+		 <div class="formrow">		
+	     <h2>Ihre Ansprechpartnerin / Ihr Ansprechpartner</h2>		  				
+ 		
+ 			<div class="form-group">
+						{eintrag.ansprechpartner} <br>
+						{eintrag.anschrift}<br>
+						<br>
+						
+			 		  <f:for each="{eintrag.apkontanktx}" as="kontankt"> 
+			 		  
+			 		   <f:if condition="{kontankt} == 'Telefon'"> 
+			 		       <div class="form-group"><b>Telefon: </b>{eintrag.aptelefon}</div> 
+			 		   </f:if>
+			  		   <f:if condition="{kontankt} == 'E-Mail'"> 
+			 		       <div class="form-group"><b>E-Mail:</b> <f:link.email email="{eintrag.apemail}" />   </div> 
+			 		   </f:if>	
+			  		   <f:if condition="{kontankt} == 'Videocall'"> 
+			 		       <div class="form-group"><b>Videocall</b> <f:link.email email="{eintrag.apemail}" />   </div> 
+			 		   </f:if>				     		   		   	   	  
+			 		 </f:for>						
+						
+						
+						 
+							 
+			</div>			
+ 		
+		 
+	 			
+											
+				
+			
+		 </div>
+		 <f:if condition="{eintrag.zielgruppe} != ''">
+			 <div class="formrow">		
+		     <h2>Welche Menschen begleiten wir?</h2>	 
+					<div class=" ">
+						<div class="form-group">
+							<f:format.html>{eintrag.zielgruppe}</f:format.html> 
+						</div>
+					</div>
+						 
+			 </div>	
+		 </f:if>
+		 
+		 <f:if condition="{eintrag.angebotsformen} != ''">
+			 <div class="formrow">		
+		     <h2>Welche Angebote halten wir für unsere Klienten vor?</h2>	 
+					<div class=" ">
+						<div class="form-group">
+							<f:format.html>{eintrag.angebotsformen}</f:format.html> 
+						</div>
+					</div>
+						 
+			 </div>	
+		 </f:if>		 
+		 	
+ 		 <f:if condition="{eintrag.schwerpunkte} != ''">
+			 <div class="formrow">		
+		     <h2>Welche Ideen leiten uns?</h2>	 
+					<div class=" ">
+						<div class="form-group">
+							<f:format.html>{eintrag.schwerpunkte}</f:format.html> 
+						</div>
+					</div>
+						 
+			 </div>	
+		 </f:if>	 
+	 
+	 		 <f:if condition="{eintrag.sonstiges} != ''">
+			 <div class="formrow">		
+		     <h2>Sonstiges</h2>	 
+					<div class=" ">
+						<div class="form-group">
+							<f:format.html>{eintrag.sonstiges}</f:format.html> 
+						</div>
+					</div>
+						 
+			 </div>	
+		 </f:if>	 
+		 
+ 		 	  
+ 	</div>
+ 	<div class="col-md-4"> 
+ 		<f:if condition="{eintrag.logourl} != ''">
+ 		
+  		 <div class="formrow">		
+	        <img src="/{eintrag.logourl}">
+ 		 </div>		
+  
+		</f:if>
+		
+ 		 <div class="formrow">		
+	     <h2>Praxisfelder</h2>	 
+ 		  
+ 		  <f:for each="{praxisfeld}" as="praxis" iteration="number"> 
+ 		  
+ 		    <div class="form-group"><b>{praxis.kategorie}</b><br></div>
+ 		  
+ 		 
+    	  		   		   	   	  
+ 		 </f:for>
+ 		  
+			 					
+ 	
+					 													
+	     </div>		
+		
+ 		 <div class="formrow">		
+	     <h2>Praktikums- und   Arbeitsmöglichkeiten  </h2>	 
+ 		  
+ 		  <f:for each="{eintrag.praktikumx}" as="praktikum" iteration="number"> 
+ 		  
+ 		   <f:if condition="{praktikum} == 'Hospitationstag'"> 
+ 		       <div class="form-group"><b>Hospitationstag</b><br>Höhere Berufsfachschule für Sozialassistenz (HBSA)</div> 
+ 		   </f:if>
+  		   <f:if condition="{praktikum} == 'Blockpraktikum'"> 
+ 		       <div class="form-group"><b>Blockpraktikum</b><br>Höhere Berufsfachschule für Sozialassistenz (HBSA)</div> 
+ 		   </f:if>	
+   		   <f:if condition="{praktikum} == 'Jahrespraktikum'"> 
+ 		       <div class="form-group"><b>Jahrespraktikum</b><br>Höhere Berufsfachschule für Sozialassistenz (HBSA)</div> 
+ 		   </f:if>			   
+    	  <f:if condition="{praktikum} == 'Fachpraxis'"> 
+ 		       <div class="form-group"><b>Dreijährige Fachpraxis</b><br>praxisintegrierte Erzieher*in-nen-Ausbildung (PIA)</div> 
+ 		   </f:if>	
+    	  <f:if condition="{praktikum} == 'Berufspraktikum'"> 
+ 		       <div class="form-group"><b>Berufspraktikum</b><br>FSP/TEA</div> 
+ 		   </f:if> 
+    	  <f:if condition="{praktikum} == 'Fachkraft'"> 
+ 		       <div class="form-group"><b>Anstellung als Fachkraft </b></div> 
+ 		   </f:if>  		   		   	   	  
+ 		 </f:for>
+ 		  
+			 					
+ 	
+					 													
+	     </div>
+		 
+ 		 <div class="formrow">		
+	     <h2>Social-Media  </h2>			 
+					<div class="form-group">
+						<f:if condition="{eintrag.facebook} != ''">
+						   <a href="{eintrag.facebook}" class="fbpagelink" target="_blank" title=""> Facebook</a>
+				     	</f:if>
+					</div>		 
+					<div class="form-group">
+						<f:if condition="{eintrag.instagram} != ''">
+						   <a href="{eintrag.instagram}" class="inpagelink" target="_blank" title=""> Instagram</a>
+				     	</f:if> 
+					</div>
+					<div class="form-group">
+						<f:if condition="{eintrag.youtube} != ''">
+						   <a href="{eintrag.youtube}" title="" class="popup-iframe popup-youtube" rel="lightbox[myImageSet]"> Youtube</a>
+				     	</f:if> 
+					</div>
+		 </div>
+ 	 		 		 	 			
+ 	</div> 		  			
+ </div> 	 
+		   
+	 
+
+
+	 
+		</div>
+	</div>
+</div> 
+</f:section>
+</html>

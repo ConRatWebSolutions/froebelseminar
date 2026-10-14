@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="EXT:crlogbook/Resources/Private/Language/locallang_mod.xlf" date="2025-01-11T16:00:00Z" product-name="crlogbook">
+        <header/>
+        <body>
+            <trans-unit id="mlang_tabs_tab">
+                <source>Logbook</source>
+            </trans-unit>
+            <trans-unit id="mlang_labels_tabdescr">
+                <source>Fahrtenbuch Verwaltung</source>
+            </trans-unit>
+            <trans-unit id="mlang_tabs_tablabel">
+                <source>Logbook</source>
+            </trans-unit>
+            <trans-unit id="mlang_tabs_tabtitle">
+                <source>Fahrtenbuch Verwaltung</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

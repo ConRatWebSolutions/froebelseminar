@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+ 
+<div class="page-wrapper famzentrum">
+ 
+           
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:2}')}!=''">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />  
+                   
+              </f:if> 
+              <f:render partial="Navigation/BreadcrumbMenue" arguments="{breadcrumb:breadcrumb}"/>
+ 
+ 
+      
+                      
+             <div class="container"> 
+            <div class="row inner">
+                <div class="main col-md-9">
+                    <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:0}')}!=''">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />  
+               </f:if>
+                 
+                </div>  
+                <div class="main col-md-3">
+                    <a href="/"><img class="image-embed-item" src="/fileadmin/Familienzentrum/logo-famz.png" alt="Familienzentrum" data-cmp-info="10"></a>
+                    <f:render partial="Navigation/FamilienzentrumSideMenue.html" arguments="{subnavigation:crsubnavigation}"/>
+                    <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:4}')}!=''">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '4'}" />  
+                   </f:if>
+                </div>
+             </div>
+            </div>
+              
+          
+                            
+                 <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:3}')}!=''">
+                         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />  
+                </f:if>                       
+                           
+                            
+                            
+ 
+                     
+             
+         
+        
+    </div>
+
+
+
+
+ 
+      
+</f:section>

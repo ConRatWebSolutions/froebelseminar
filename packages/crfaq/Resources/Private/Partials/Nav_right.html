@@ -1,0 +1,76 @@
+<div class="row">
+	
+<div class="col-md-9">
+	<div id="accordion" role="tablist">
+     <f:for each="{eintrags}" as="eintrag" iteration="iterator">	
+		    
+		    <div class="collapsed-header" role="tab" id="heading{eintrag.uid}">
+		      <h5 class="mb-0">
+		        	<f:if condition='{iterator.index}==0'>
+		        	<f:then>
+		      			<i class="more-less glyphicon glyphicon-minus"></i>
+			      	    <a class="collapsed" data-toggle="collapse" href="#collapse{eintrag.uid}" aria-expanded="TRUE" aria-controls="collapse">{eintrag.frage}</a>
+		       		</f:then>
+		       		<f:else>
+		      			<i class="more-less glyphicon glyphicon-plus"></i>
+			      	    <a class="collapsed" data-toggle="collapse" href="#collapse{eintrag.uid}" aria-expanded="FALSE" aria-controls="collapse">{eintrag.frage}</a>		      		
+		      		 </f:else>
+		      		</f:if>
+		      </h5>
+		    </div>
+		    
+		    <div id="collapse{eintrag.uid}" class="collapse <f:if condition='{iterator.index}==0'><f:then>collapsed in</f:then><f:else></f:else></f:if>" role="tabpanel" aria-labelledby="heading{eintrag.uid}" data-parent="#accordion">
+		      <div class="collapsed-body"><f:format.html>{eintrag.antwort}</f:format.html></div>
+		    </div>
+	</f:for>
+	</div>
+</div>
+<div class="col-md-3">	
+	<h3>{header}</h3> 
+	<ul class="catnav">
+		<f:for each="{kategorien}" as="kategorie" iteration="iterator">
+			<f:if condition="{kategorie.uid}=={activeurl}"  >
+				<f:then>
+					<li class="active"><f:link.action action="list" arguments="{uid : '{kategorie.uid}'}">{kategorie.titel}</f:link.action>
+						
+						<f:if condition="{kategorie.subs.0.uid}!=''"  >
+								<ul>
+								<f:for each="{kategorie.subs}" as="sub">
+										<li><f:link.action action="list" arguments="{uid : '{sub.uid}'}">{sub.titel}</f:link.action> </li>
+								</f:for>	
+								</ul>
+						</f:if>	
+						
+					</li> 
+				</f:then>
+				<f:else>
+				    <li><f:link.action action="list" arguments="{uid : '{kategorie.uid}'}">{kategorie.titel}</f:link.action>
+				    	
+						<f:if condition="{kategorie.subs.0.uid}!=''"  >
+								<ul>
+								<f:for each="{kategorie.subs}" as="sub">
+										<li><f:link.action action="list" arguments="{uid : '{sub.uid}'}">{sub.titel}</f:link.action> </li>
+								</f:for>	
+								</ul>
+						</f:if>					    	
+				    	
+				    </li> 
+				</f:else>
+			</f:if>	
+		</f:for>
+	</ul>
+</div>
+</div>	
+<script>
+	
+	function toggleIcon(e) {
+        $(e.target)
+            .prev('.collapsed-header')
+            .find(".more-less")
+            .toggleClass('glyphicon-plus glyphicon-minus');
+    }
+    $('#accordion').on('hidden.bs.collapse', toggleIcon);
+    $('#accordion').on('shown.bs.collapse', toggleIcon);	
+	
+	
+</script>

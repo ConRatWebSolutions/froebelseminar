@@ -1,0 +1,30 @@
+<h1>{eintrags.frage}</h1>
+
+<f:format.html>{eintrags.antwort}</f:format.html>
+	<f:if condition="{eintrags.bilder.0.identifier} != ''">
+		  <f:render partial="Detail/ShowImages" arguments="{images:eintrags.bilder}" />
+	</f:if>	
+
+<f:if condition="{eintrags.blog1}!= ''">	
+	<f:format.html>{eintrags.blog1}</f:format.html>
+</f:if>
+	<f:if condition="{eintrags.blog1bilder.0.identifier} != ''">
+		<f:render partial="Detail/ShowImages" arguments="{images:eintrags.blog1bilder}" />
+	</f:if>	
+
+
+<f:if condition="{eintrags.blog2}!= ''">	
+	<f:format.html>{eintrags.blog2}</f:format.html>
+</f:if>
+<f:if condition="{eintrags.blog2bilder.0.identifier} != ''">
+	<f:render partial="Detail/ShowImages" arguments="{images:eintrags.blog2bilder}" />
+</f:if>	
+
+
+<f:if condition="{eintrags.downloads.0.identifier} != ''">
+	<f:for each="{eintrags.downloads}" as="download">
+   			 
+   			      <a href="fileadmin{download.identifier}" target="_blank">{download.title}</a> 
+   			 
+    </f:for>
+</f:if>

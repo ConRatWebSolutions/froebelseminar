@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:crkalender/Resources/Private/Language/locallang" date="2022-09-06T13:02:10Z" product-name="crkalender">
+		<header/>
+		<body>
+			<trans-unit id="tx_crkalender_domain_model_eintrag" resname="tx_crkalender_domain_model_eintrag">
+				<source>Eintrag</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.titel" resname="tx_crkalender_domain_model_eintrag.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.datum" resname="tx_crkalender_domain_model_eintrag.datum">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.zeit" resname="tx_crkalender_domain_model_eintrag.zeit">
+				<source>Zeit</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.bis" resname="tx_crkalender_domain_model_eintrag.bis">
+				<source>Bis</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.bzeit" resname="tx_crkalender_domain_model_eintrag.bzeit">
+				<source>Bzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.kurzbeschreibung" resname="tx_crkalender_domain_model_eintrag.kurzbeschreibung">
+				<source>Kurzbeschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.beschreibung" resname="tx_crkalender_domain_model_eintrag.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.ort" resname="tx_crkalender_domain_model_eintrag.ort">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.erstellt" resname="tx_crkalender_domain_model_eintrag.erstellt">
+				<source>Erstellt</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.link" resname="tx_crkalender_domain_model_eintrag.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.bemerkung" resname="tx_crkalender_domain_model_eintrag.bemerkung">
+				<source>Bemerkung</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.bemerkung1" resname="tx_crkalender_domain_model_eintrag.bemerkung1">
+				<source>Bemerkung1</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.kosten" resname="tx_crkalender_domain_model_eintrag.kosten">
+				<source>Kosten</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.anmledung" resname="tx_crkalender_domain_model_eintrag.anmledung">
+				<source>Anmledung</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.referent" resname="tx_crkalender_domain_model_eintrag.referent">
+				<source>Referent</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.google_id" resname="tx_crkalender_domain_model_eintrag.google_id">
+				<source>Google Id</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.bilder" resname="tx_crkalender_domain_model_eintrag.bilder">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.kategorie" resname="tx_crkalender_domain_model_eintrag.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_eintrag.filter" resname="tx_crkalender_domain_model_eintrag.filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_kategorie" resname="tx_crkalender_domain_model_kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_kategorie.kategorie" resname="tx_crkalender_domain_model_kategorie.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_filter" resname="tx_crkalender_domain_model_filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="tx_crkalender_domain_model_filter.titel" resname="tx_crkalender_domain_model_filter.titel">
+				<source>Titel</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

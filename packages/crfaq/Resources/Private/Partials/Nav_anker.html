@@ -1,0 +1,43 @@
+  		<ul class="catnav">   
+				<f:for each="{kategorien}" as="kategorie" iteration="iterator">
+					<f:if condition="{kategorie.uid}=={activeurl}"  >
+						<f:then>
+							<li class="active"><a class="navscoll" data-id="tx_{kategorie.alias}"> href="#{kategorie.alias}">{kategorie.titel}</a>   
+								
+								<f:if condition="{kategorie.subs.0.uid}!=''"  >
+										<ul>
+										<f:for each="{kategorie.subs}" as="sub">
+												<li><a class="navscoll" data-id="tx_{kategorie.alias}">{sub.titel}</a> </li>
+										</f:for>	
+										</ul>
+								</f:if>	
+								
+							</li> 
+						</f:then>
+						<f:else>
+						    <li><a class="navscoll" data-id="tx_{kategorie.alias}">{kategorie.titel}</a> 
+						    	
+								<f:if condition="{kategorie.subs.0.uid}!=''"  >
+										<ul>
+										<f:for each="{kategorie.subs}" as="sub">
+													<li><a class="navscoll" data-id="tx_{kategorie.alias}">{sub.titel}</a> </li>
+										</f:for>	
+										</ul>
+								</f:if>					    	
+						    	
+						    </li> 
+						</f:else>
+					</f:if>	
+				</f:for>
+			</ul>
+			
+<script>	
+ 	$("body").on("click",".navscoll",function(){
+ 		
+ 		    $("html, body").animate({
+        	scrollTop: $('#'+$(this).attr("data-id")).offset().top 
+    		}, 700);
+    
+    });
+ 
+</script>

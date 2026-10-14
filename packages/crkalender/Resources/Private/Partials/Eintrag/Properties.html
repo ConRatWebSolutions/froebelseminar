@@ -1,0 +1,140 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-crkalender" >
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.titel" />
+		</td>
+		<td>
+		{eintrag.titel}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.datum" />
+		</td>
+		<td>
+		{eintrag.datum -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.zeit" />
+		</td>
+		<td>
+		{eintrag.zeit}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.bis" />
+		</td>
+		<td>
+		{eintrag.bis -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.bzeit" />
+		</td>
+		<td>
+		{eintrag.bzeit}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.kurzbeschreibung" />
+		</td>
+		<td>
+		{eintrag.kurzbeschreibung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.beschreibung" />
+		</td>
+		<td>
+		{eintrag.beschreibung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.ort" />
+		</td>
+		<td>
+		{eintrag.ort}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.erstellt" />
+		</td>
+		<td>
+		{eintrag.erstellt}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.link" />
+		</td>
+		<td>
+		{eintrag.link}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.bemerkung" />
+		</td>
+		<td>
+		{eintrag.bemerkung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.bemerkung1" />
+		</td>
+		<td>
+		{eintrag.bemerkung1}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.kosten" />
+		</td>
+		<td>
+		{eintrag.kosten}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.anmledung" />
+		</td>
+		<td>
+		{eintrag.anmledung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.referent" />
+		</td>
+		<td>
+		{eintrag.referent}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.google_id" />
+		</td>
+		<td>
+		{eintrag.googleId}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_crkalender_domain_model_eintrag.bilder" />
+		</td>
+		<td>
+				<f:image src="{eintrag.bilder.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+</table>
+</html>

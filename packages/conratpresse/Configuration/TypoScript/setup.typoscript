@@ -1,0 +1,78 @@
+
+# Plugin-Registrierung für TYPO3 v13
+tt_content.list.20.conrat_conratpresse_conratpresse = USER
+tt_content.list.20.conrat_conratpresse_conratpresse {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    vendorName = Conrat
+    extensionName = Conratpresse
+    pluginName = Conratpresse
+    controller = Presseartikel
+    action = list
+    switchableControllerActions {
+        Presseartikel {
+            1 = list
+            2 = show
+        }
+    }
+    settings {
+        templateRootPath = EXT:conratpresse/Resources/Private/Templates/
+        partialRootPath = EXT:conratpresse/Resources/Private/Partials/
+        layoutRootPath = EXT:conratpresse/Resources/Private/Layouts/
+    }
+}
+
+plugin.tx_conrat_conratpresse_conratpresse {
+    view {
+        templateRootPaths.0 = EXT:conratpresse/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:conratpresse/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:conratpresse/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid = {$plugin.tx_conrat_conratpresse_conratpresse.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# these classes are only used in auto-generated templates
+plugin.tx_conratpresse._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-conratpresse table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-conratpresse table th {
+        font-weight:bold;
+    }
+
+    .tx-conratpresse table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)

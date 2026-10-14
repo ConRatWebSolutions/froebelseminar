@@ -1,0 +1,44 @@
+# # Seitenleiste
+
+mod {
+    web_layout {
+        BackendLayouts {
+            page {
+                title = Normale Seite
+                icon = EXT:c4theme/Resources/Public/Icons/BeLayouts/Seitenleiste.svg
+                config {
+					backend_layout {
+						colCount = 1
+						rowCount = 3
+						rows {
+							1{
+								columns {
+									1 {
+										name = Banner 
+										colPos = 2
+									}
+								}
+							}
+							2{
+								columns {
+									1 {
+										name = Haupttext
+										colPos = 0
+									}
+								}
+							}
+							3{
+								columns {
+									1 {
+										name =  weitere Spalte
+										colPos = 1
+									}
+								}
+							}
+						}
+					}
+                }
+            }
+        }
+    }
+}

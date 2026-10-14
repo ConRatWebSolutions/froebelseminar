@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-8">
+		     <f:format.html>{termin.beschreibung}</f:format.html> 
+	         <f:format.html>{termin.bemerkung}</f:format.html> 
+	</div>
+	<div class="col-md-4">
+		 
+	    <f:if condition="{termin.anmledung} != ''"><f:format.html>{termin.anmledung}</f:format.html> <br></f:if>
+		<f:for each="{bilder}" as="image">
+		
+		<img src="fileadmin/{image.identifier}" class="responsive-img" alt="" />
+		
+		</f:for> 
+		 <f:if condition="{termin.bemerkung1} != ''"><br><f:format.html>{termin.bemerkung1}</f:format.html></f:if>
+	</div>
+</div>	

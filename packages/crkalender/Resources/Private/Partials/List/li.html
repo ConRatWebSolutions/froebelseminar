@@ -1,0 +1,30 @@
+     
+<ul>
+	<f:for each="{termins}" as="termin"> 
+	
+     
+     	<li class=" mixitup{termin.main.filter.0.uid}"><f:format.date format="d.m.Y">{termin.main.datum}</f:format.date><br>
+     		 <f:if condition="{termin.main.kurzbeschreibung} != ''">	
+				  	<f:then>
+				  	    <f:link.action class="" pageUid="{config.iddershowseite}" arguments="{uid: '{termin.main.uid}'}" action="detail" ><h3>{termin.main.titel}</h3></f:link.action>
+				  	</f:then>
+				  	<f:else>
+				  	     <h3>{termin.main.titel}</h3>
+				  	</f:else>  
+				  	</f:if> 
+     		
+   
+     		<div class="text">
+     	 		
+     	 		<p>{termin.main.ort}</p>
+     			 	 
+     		</div>
+	 				       <f:if condition="{termin.main.link} != ''">
+                          <a href="{termin.main.link}" class="btn btn-primary btn-termin" target="_blank">zur Anmeldung</a>
+                       </f:if>
+	    </li>
+	   
+	
+	 
+	</f:for>
+	</ul>

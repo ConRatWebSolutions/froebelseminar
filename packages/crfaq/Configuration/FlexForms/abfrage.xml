@@ -1,0 +1,134 @@
+<T3DataStructure>
+    <meta type="array">
+        <langChildren>0</langChildren>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <sheetTitle>LLL:EXT:crfaq/Resources/Private/Language/locallang.xlf:flexform.sheet.general</sheetTitle>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <settings.ansicht>
+                        <label>Ansicht</label>
+                        <config>
+                          <type>select</type>
+                          <renderType>selectSingle</renderType>
+                           <items type="array">
+                            <numIndex index="0" type="array">
+                              <numIndex index="0">Anzeige als Klapper </numIndex>
+                              <numIndex index="1">klapper</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                              <numIndex index="0">Anzeige als Seite</numIndex>
+                              <numIndex index="1">liste</numIndex>
+                            </numIndex>
+                                                                                                                                                       
+                          </items>
+                            <maxitems>1</maxitems>
+                          <size>1</size>
+                        </config>
+                    </settings.ansicht>
+                    <settings.kategorieansicht>
+                        <label>Ansicht</label>
+                        <config>
+                          <type>select</type>
+                          <renderType>selectSingle</renderType>
+                           <items type="array">
+                            <numIndex index="0" type="array">
+                              <numIndex index="0">Kategorie nicht anzeigen </numIndex>
+                              <numIndex index="1">no_nav</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                              <numIndex index="0">Kategorie Liste links</numIndex>
+                              <numIndex index="1">nav_left</numIndex>
+                            </numIndex>
+                             <numIndex index="2" type="array">
+                              <numIndex index="0">Kategorie Liste rechts</numIndex>
+                              <numIndex index="1">nav_right</numIndex>
+                            </numIndex> 
+                              <numIndex index="3" type="array">
+                              <numIndex index="0">Kategorie Liste links Anker</numIndex>
+                              <numIndex index="1">nav_left-anker</numIndex>
+                            </numIndex> 
+                               <numIndex index="4" type="array">
+                              <numIndex index="0">Kategorie Liste rechts Anker</numIndex>
+                              <numIndex index="1">nav_right-anker</numIndex>
+                            </numIndex>                                                                                                                                                                                                                    
+                          </items>
+                            <maxitems>1</maxitems>
+                          <size>1</size>
+                        </config>
+                    </settings.kategorieansicht>
+                      <settings.firstkat>
+                        <label>Erste FAQ ausklappen: </label>
+                        <config>
+                            <type>check</type>
+                        </config>
+                    </settings.firstkat>                   
+                     <settings.header>
+                        <label>Überschrift Kategorien</label>
+                            <config>
+                              <type>input</type>
+                              <size>40</size>
+                              <max>200</max>
+                              <eval>trim</eval>
+                            </config>
+                    </settings.header>
+ 
+                     <settings.category>
+                        <label>Nur Kategorien anzeigen</label>
+                        <config>
+                          <type>select</type>
+                          <renderType>selectMultipleSideBySide</renderType>
+                            <maxitems>5</maxitems>
+                          <size>5</size>
+                          <foreign_table>tx_crfaq_domain_model_kategorie</foreign_table>
+
+                        </config>
+                    </settings.category>
+     
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+        <sDetail>
+            <sheetTitle>LLL:EXT:crfaq/Resources/Private/Language/locallang.xlf:flexform.sheet.detail</sheetTitle>
+            <ROOT>
+                <type>array</type>
+                <el> 
+                     <settings.idshow>
+                        <label>Detailseite</label>
+                            <config>
+                              <type>group</type>
+                              <internal_type>db</internal_type>
+                               <allowed>pages</allowed>
+                              <minitems>0</minitems>
+                              <maxitems>200</maxitems>
+                              <size>1</size>
+                            </config>
+                     </settings.idshow>  
+                       <settings.idlist>
+                        <label>Übersichtsseite</label>
+                            <config>
+                              <type>group</type>
+                              <internal_type>db</internal_type>
+                               <allowed>pages</allowed>
+                              <minitems>0</minitems>
+                              <maxitems>200</maxitems>
+                              <size>1</size>
+                            </config>
+                     </settings.idlist>                    
+                     
+                     <settings.shsocialmedia>
+                        <label>Teilen Button anzeigen: </label>
+                        <config>
+                            <type>check</type>
+                        </config>
+                    </settings.shsocialmedia>                    
+                </el>
+            </ROOT>
+        </sDetail>
+    </sheets>
+</T3DataStructure>

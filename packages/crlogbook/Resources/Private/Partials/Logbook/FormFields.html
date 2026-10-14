@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="datum">
+	<f:translate key="tx_crlogbook_domain_model_logbook.datum" />
+</label><br />
+	<f:form.textfield property="datum" value="{logbook.datum->f:format.date()}" /><br />
+<label for="start">
+	<f:translate key="tx_crlogbook_domain_model_logbook.start" />
+</label><br />
+	<f:form.textfield property="start" value="{logbook.start->f:format.date()}" /><br />
+<label for="ende">
+	<f:translate key="tx_crlogbook_domain_model_logbook.ende" />
+</label><br />
+	<f:form.textfield property="ende" value="{logbook.ende->f:format.date()}" /><br />
+<label for="fahrstrecke">
+	<f:translate key="tx_crlogbook_domain_model_logbook.fahrstrecke" />
+</label><br />
+	<f:form.textfield property="fahrstrecke" /><br />
+<label for="von">
+	<f:translate key="tx_crlogbook_domain_model_logbook.von" />
+</label><br />
+	<f:form.textfield property="von" /><br />
+<label for="bis">
+	<f:translate key="tx_crlogbook_domain_model_logbook.bis" />
+</label><br />
+	<f:form.textfield property="bis" /><br />
+<label for="bemerkung">
+	<f:translate key="tx_crlogbook_domain_model_logbook.bemerkung" />
+</label><br />
+	<f:form.textarea property="bemerkung" cols="40" rows="15" /><br />
+<label for="grund">
+	<f:translate key="tx_crlogbook_domain_model_logbook.grund" />
+</label><br />
+	<f:form.textarea property="grund" cols="40" rows="15" /><br />
+<label for="user">
+	<f:translate key="tx_crlogbook_domain_model_logbook.user" />
+</label><br />
+	<f:form.textfield property="user" /><br />
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-05T14:00:20Z" product-name="crlogbook">
+		<header/>
+		<body>
+			<trans-unit id="datum.description">
+				<source>datum</source>
+			</trans-unit>
+			<trans-unit id="start.description">
+				<source>start</source>
+			</trans-unit>
+			<trans-unit id="ende.description">
+				<source>ende</source>
+			</trans-unit>
+			<trans-unit id="fahrstrecke.description">
+				<source>fahrstrecke</source>
+			</trans-unit>
+			<trans-unit id="von.description">
+				<source>von</source>
+			</trans-unit>
+			<trans-unit id="bis.description">
+				<source>bis</source>
+			</trans-unit>
+			<trans-unit id="bemerkung.description">
+				<source>bemerkung</source>
+			</trans-unit>
+			<trans-unit id="grund.description">
+				<source>grund</source>
+			</trans-unit>
+			<trans-unit id="user.description">
+				<source>user</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

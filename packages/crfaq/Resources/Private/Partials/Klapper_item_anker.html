@@ -1,0 +1,28 @@
+ <f:for each="{eintrags}" as="item" iteration="int">	
+				    
+	<div id="tx_{item.alias}" class="collapsed-heading <f:if condition="{int.isFirst}"> first</f:if>"><h2>{item.titel}</h2></div>	
+	
+				<f:for each="{item.subs}" as="eintrag" iteration="iterator">    
+					    <div class="collapsed-header" role="tab" id="heading{eintrag.uid}">
+					      <h5 class="mb-0">  
+							        	<f:if condition='{iterator.index}==0'>
+							        	<f:then>
+							      			<i class="more-less glyphicon glyphicon-minus"></i>
+								      	    <a class="collapsed" data-toggle="collapse" href="#collapse{eintrag.uid}" aria-expanded="TRUE" aria-controls="collapse">{eintrag.frage}</a>
+							       		</f:then>
+							       		<f:else>
+							      			<i class="more-less glyphicon glyphicon-plus"></i>
+								      	    <a class="collapsed" data-toggle="collapse" href="#collapse{eintrag.uid}" aria-expanded="FALSE" aria-controls="collapse">{eintrag.frage}</a>		      		
+							      		 </f:else>
+							      		</f:if>		      	   		      	   
+			    
+					      </h5>
+					    </div>
+					    
+					    <div id="collapse{eintrag.uid}" class="collapse <f:if condition='{int.index}==0'> <f:if condition='{iterator.index}==0'><f:then>collapsed in</f:then> </f:if></f:if>" role="tabpanel" aria-labelledby="heading{eintrag.uid}" data-parent="#accordion">
+					      <div class="collapsed-body"><f:format.html>{eintrag.antwort}</f:format.html></div>
+					    </div>
+			   </f:for>
+	 
+ </f:for>
+	 

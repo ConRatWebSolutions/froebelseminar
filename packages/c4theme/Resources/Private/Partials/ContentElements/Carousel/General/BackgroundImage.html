@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{item.backgroundImage.0}">
+    <f:variable name="backgroundImageObject" value="{item.backgroundImage.0}"/>
+    <f:variable name="backgroundImageIdentifier" value="carousel-backgroundimage-{data.uid}-{item.data.uid}"/>
+    <f:variable name="backgroundImageClasses">carousel-backgroundimage</f:variable>
+    <f:if condition="{item.data.background_image_options.parallax}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-parallax</f:variable></f:if>
+    <f:if condition="{item.data.background_image_options.fade}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-fade</f:variable></f:if>
+    <f:if condition="{item.data.background_image_options.filter}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} carousel-backgroundimage-{item.data.background_image_options.filter}</f:variable></f:if>
+    <div class="carousel-backgroundimage-container">
+        <div id="{backgroundImageIdentifier}" class="{backgroundImageClasses}">
+            <f:variable name="styles" value=""/>
+            <f:variable name="imageConfig">{settings.responsiveimages.contentelements.{data.CType}.background_image}</f:variable>
+            <f:variable name="styles">#{backgroundImageIdentifier} { background-image: url('{f:uri.image(image: backgroundImageObject)}'); background-size: cover; background-position: center; }</f:variable>
+            <bk2k:condition.classExists class="TYPO3\CMS\Fluid\ViewHelpers\Security\NonceViewHelper">
+                <f:then>
+                    <f:render partial="Carousel/General/BackgroundImageStyleNonce" arguments="{_all}" />
+                </f:then>
+                <f:else>
+                    <f:render partial="Carousel/General/BackgroundImageStyle" arguments="{_all}" />
+                </f:else>
+            </bk2k:condition.classExists>
+        </div>
+    </div>
+</f:if>
+</html>

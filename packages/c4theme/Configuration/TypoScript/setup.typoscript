@@ -1,0 +1,257 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crkalender/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:conratpresse/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crlogbook/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crbuchkatalog/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:crfaq/Configuration/TypoScript/setup.typoscript">
+
+ 
+
+########################
+### CONTENT ELEMENTS ###
+########################
+
+
+# Standard TYPO3 Content Element Frames aktivieren - Bootstrap Package erweitern
+lib.contentElement {
+    # Template-Pfade für eigene Content-Elemente
+    templateRootPaths {
+        10 = EXT:c4theme/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        10 = EXT:c4theme/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        10 = EXT:c4theme/Resources/Private/Layouts/ContentElements/
+    }
+}
+
+tt_content.c4theme_banner =< lib.contentElement
+tt_content.c4theme_banner {
+    templateName = Banner
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = files
+        }
+    }
+}
+
+  
+
+ 
+
+##############
+#### PAGE ####
+##############
+page {
+    config {
+            pageRendererTemplateFile =  EXT:c4theme/Resources/Private/Layouts/PageRenderer.html
+            contentObjectExceptionHandler = 0   
+            index_enable = 1
+            language = de
+            spamProtectEmailAddresses = 2
+            spamProtectEmailAddresses_atSubst = (at)
+            renderCharset = utf-8
+            metaCharset = utf-8
+            additionalHeaders.10.header = Content-Type:text/html;charset=utf-8
+            doctype = html5
+            xmlprologue = none
+            removeDefaultJS = external
+            removeDefaultCss = 0
+            inlineStyle2TempFile = 1
+             
+         }
+         
+ 
+
+    includeCSS {
+        
+        typo3 = EXT:c4theme/Resources/Public/Css/typo3.css
+          
+        fonts = /fileadmin/font-awesome-4.7.0/css/font-awesome.min.css
+        
+        menue = EXT:c4theme/Resources/Public/Css/menue.css
+        app = EXT:c4theme/Resources/Public/Css/app.css
+        banner = EXT:c4theme/Resources/Public/Css/banner.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJSFooterlibs {
+          jq          = EXT:c4theme/Resources/Public/JavaScript/Src/jquery.js
+    }
+
+    includeJSFooter {
+         main          = EXT:c4theme/Resources/Public/JavaScript/Src/main.js
+    }
+
+    typeNum = 0
+    shortcutIcon = /fileadmin/webdaten/icons/favicon.ico
+    
+   
+
+
+    10 = FLUIDTEMPLATE
+    10 {
+         templateName = TEXT
+         templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        variables{
+
+            bodyId = TEXT
+            bodyId.data = TSFE:id
+            bodyId.wrap = page-|
+            
+            bodyClass = TEXT
+            bodyClass.data = TSFE:page|layout
+            bodyClass.wrap = layout-|
+
+                instagramLink = TEXT
+                instagramLink.value = {$page.settings.instagramLink}
+                
+                facebookLink = TEXT
+                facebookLink.value = {$page.settings.facebookLink}
+
+            
+
+                footerAddress = CONTENT
+                footerAddress{
+                    table = tt_content
+                    select{
+                        pidInList = 1
+                        where = colPos = 98
+                    }
+                    renderObj = TEXT
+                    renderObj.field = bodytext
+                }
+               
+            
+        }
+
+		dataProcessing {
+           
+            
+            35 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            35 {
+                levels = 4
+                includeSpacer = 0
+                as = topInternNav 
+                special = directory
+                special.value = 69
+                
+               
+            }
+            55 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            55 {
+                levels = 4
+                includeSpacer = 0
+                as = footerNav 
+                special = directory
+                special.value = 61
+                
+               
+            } 
+            100 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            100 {
+                special = rootline
+                special.range = 1|-1
+                as = breadcrumb
+                expandAll = 1
+                titleField = nav_title // title
+            }
+            200 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            200 {
+                levels = 2
+                includeSpacer = 0
+                as = crsubnavigation
+                special = directory
+                special.value = 85
+                titleField = nav_title // title
+            }
+            500 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            500 {
+                references {
+                    table = pages
+                    uid.data = TSFE:id
+                    fieldName = media
+                }
+                as = crmediaFiles
+            }
+        }
+
+
+
+        }
+        headerData{
+    
+         1 = TEXT
+         1.value (
+ 
+ 
+       
+        ) 
+        5 = TEXT
+        5.value(
+            
+
+	  	<link rel="apple-touch-icon" sizes="57x57" href="/fileadmin/webdaten/icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/fileadmin/webdaten/icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/fileadmin/webdaten/icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/fileadmin/webdaten/icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/fileadmin/webdaten/icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/fileadmin/webdaten/icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/fileadmin/webdaten/icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/fileadmin/webdaten/icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/fileadmin/webdaten/icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/fileadmin/webdaten/icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/fileadmin/webdaten/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/fileadmin/webdaten/icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/fileadmin/webdaten/icons/favicon-16x16.png">
+		<link rel="manifest" href="/fileadmin/webdaten/icons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/fileadmin/webdaten/icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+
+        )
+
+    
+    }
+}
+
+ 
+ 
+
+ plugin.tx_powermail.settings {
+  validation.client = 1
+  validation.server = 1
+
+  misc {
+    file {
+      extension = pdf         # Nur PDF erlauben (steuert accept + JS-Validierung)
+      size = 10485760         # Optional: max. Größe in Bytes (10 MB)
+    }
+
+    # optional zusätzlich (ältere/alternative Option)
+    uploadFileExtensions = pdf
+  }
+}

@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+ 
+<div class="page-wrapper">
+ 
+           
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:2}')}!=''">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />  
+                   
+              </f:if> 
+              <f:render partial="Navigation/BreadcrumbMenue" arguments="{breadcrumb:breadcrumb}"/>
+ 
+ 
+      
+              <section class="main-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="main col-md-12">
+                            <h1 class="page-title"> 
+                                <f:if condition="{data.tx_c4theme_page_heading} == ''">
+                                    <f:then>
+                                         {data.title}  
+                                    </f:then>    
+                                    <f:else>
+                                        {data.tx_c4theme_page_heading}
+                                    </f:else>
+                                </f:if>
+                                </h1>
+                            <div class="separator-2"></div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </section>           
+
+
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:0}')}!=''">
+                         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />  
+                </f:if>
+          
+                            
+                 <f:if condition="{f:cObject(typoscriptObjectPath:'lib.dynamicContent',data:'{colPos:3}')}!=''">
+                         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />  
+                </f:if>                       
+                           
+                            
+                            
+ 
+                     
+             
+         
+        
+    </div>
+
+
+
+
+ 
+      
+</f:section>

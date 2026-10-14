@@ -1,0 +1,15 @@
+ <f:for each="{eintrags}" as="item" iteration="int">	
+				    
+	<div id="tx_{item.alias}" class="collapsed-heading <f:if condition="{int.isFirst}"> first</f:if>"><h2>{item.titel}</h2></div>		    
+    
+     <f:for each="{item.subs}" as="eintrag" iteration="iterator">	
+		    
+		    <div class="collapsed-header"  id="heading{eintrag.uid}">
+		      <h5 class="mb-0">
+		   	      		<i class="more-less glyphicon glyphicon-plus"></i>
+		      			<f:link.action pageUid="{config.idshow}" class="collapsed" action="show" arguments="{uid: '{eintrag.uid}'}" >{eintrag.frage}</f:link.action>
+		      </h5>
+		    </div>
+ 
+	</f:for>
+</f:for>

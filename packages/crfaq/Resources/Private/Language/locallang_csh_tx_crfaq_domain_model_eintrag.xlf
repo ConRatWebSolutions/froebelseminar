@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-30T15:02:00Z" product-name="crfaq">
+		<header/>
+		<body>
+			<trans-unit id="frage.description">
+				<source>frage</source>
+			</trans-unit>
+			<trans-unit id="antwort.description">
+				<source>antwort</source>
+			</trans-unit>
+			<trans-unit id="bilder.description">
+				<source>bilder</source>
+			</trans-unit>
+			<trans-unit id="blog1.description">
+				<source>blog1</source>
+			</trans-unit>
+			<trans-unit id="blog1bilder.description">
+				<source>blog1bilder</source>
+			</trans-unit>
+			<trans-unit id="blog2.description">
+				<source>blog2</source>
+			</trans-unit>
+			<trans-unit id="blog2bilder.description">
+				<source>blog2bilder</source>
+			</trans-unit>
+			<trans-unit id="downloads.description">
+				<source>downloads</source>
+			</trans-unit>
+			<trans-unit id="sortings.description">
+				<source>sortings</source>
+			</trans-unit>
+			<trans-unit id="kategorie.description">
+				<source>kategorie</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

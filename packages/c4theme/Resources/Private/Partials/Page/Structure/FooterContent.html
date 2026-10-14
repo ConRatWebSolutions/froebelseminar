@@ -1,0 +1,73 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+{settings.footerContentPid}
+<footer id="footer" class="light">
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="footer-content">
+						<div class="logo-footer"><img src="/fileadmin/images/f-logo2.png" id="logo" alt="{settings.siteTitle}"/></div>
+						<div class="row">
+							<div class="col-sm-4">
+								<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0',pageUid:'60'}" />
+                              	<f:if condition="{settings.fblink}">
+									<ul class="social-links circle">
+										<li class="facebook">
+											<f:link.external uri="{settings.fblink}" target="_blank" title="{settings.siteTitle}"><i class="fa fa-facebook"></i></f:link.external>
+										</li>
+										<li class="instagram">
+											<f:link.external uri="https://www.instagram.com/ev.froebelseminar/" target="_blank" title="{settings.siteTitle}"><i class="fa fa-instagram"></i></f:link.external>
+										</li>										
+									</ul>
+                                </f:if>
+							</div>
+							<div class="col-sm-4">
+								<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1',pageUid:'60'}" />
+							</div>
+                            <div class="col-sm-4">
+								<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2',pageUid:'60'}" />
+							</div>
+						</div>
+					</div>	
+					<div class="space-bottom hidden-lg hidden-xs"></div>
+				</div>
+			
+				<div class="col-sm-3 col-md-2">
+					<div class="footer-content"> 
+						<h2>
+							Links
+						</h2>
+						<f:render partial="Navigation/FooterMenue" arguments="{footerNav:footerNav}"/>
+						<ul class="social-links circle">
+							<li class="facebook">
+								<a title="Evangelisches Fröbelseminar Kassel" target="_blank" href="https://www.facebook.com/Evangelisches-Froebelseminar-361224003935953"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li class="instagram">
+								<a title="Evangelisches Fröbelseminar Kassel" target="_blank" href="https://www.instagram.com/ev.froebelseminar/"><i class="fa fa-instagram"></i></a>
+							</li>										
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="space-bottom hidden-lg hidden-xs"></div>
+		</div>
+	</div>
+	<div class="subfooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p>© 2025 Evangelisches Fröbelseminar Kassel </p>
+				</div>
+				<div class="col-md-6">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script async src="https://translate-cdn.eye-able.com/eye-able-translate.js"></script>
+	<easy-speech  position="fixed" right="0%" bottom="16%"></easy-speech>
+   <translation-select position="fixed" right="0%" bottom="7%" langs="en-US,fr,uk,ru,tr,ar,ku,fa,de,bg,cs,da,es,el,it,hr,hu,nl,no,pl,pt,ro,sv"></translation-select>
+</footer>
+</html>

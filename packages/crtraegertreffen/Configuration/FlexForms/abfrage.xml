@@ -1,0 +1,45 @@
+<T3DataStructure>
+    <meta type="array">
+        <langChildren>0</langChildren>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <Layout>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <settings.category>
+                        <label>Nur Kategorien anzeigen</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectMultipleSideBySide</renderType>
+                            <maxitems>5</maxitems>
+                            <size>5</size>
+                            <foreign_table>tx_crtraegertreffen_domain_model_standort</foreign_table>
+                        </config>
+                    </settings.category>
+                    
+                    <settings.ansicht>
+                        <label>Ansicht</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">Einträge</numIndex>
+                                    <numIndex index="1">items</numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Formular</numIndex>
+                                    <numIndex index="1">form</numIndex>
+                                </numIndex>
+                            </items>
+                            <maxitems>1</maxitems>
+                            <size>1</size>
+                        </config>
+                    </settings.ansicht>
+                </el>
+            </ROOT>
+        </Layout>
+    </sheets>
+</T3DataStructure>

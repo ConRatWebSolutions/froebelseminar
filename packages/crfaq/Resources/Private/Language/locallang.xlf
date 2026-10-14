@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-30T15:02:00Z" product-name="crfaq">
+		<header/>
+		<body>
+			<trans-unit id="tx_crfaq_domain_model_eintrag">
+				<source>Eintrag</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.frage">
+				<source>Frage</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.antwort">
+				<source>Antwort</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.bilder">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.blog1">
+				<source>Blog1</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.blog1bilder">
+				<source>Blog1bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.blog2">
+				<source>Blog2</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.blog2bilder">
+				<source>Blog2bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.downloads">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.sortings">
+				<source>Sortings</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_eintrag.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_kategorie.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_kategorie.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_kategorie.subvon">
+				<source>Subvon</source>
+			</trans-unit>
+			<trans-unit id="tx_crfaq_domain_model_kategorie.sortings">
+				<source>Sortings</source>
+			</trans-unit>
+			<trans-unit id="plugin.crfaq_crfaq.name">
+				<source>ConRat FaQ</source>
+			</trans-unit>
+			<trans-unit id="plugin.crfaq_crfaq.description">
+				<source>ConRat FaQ Plugin</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.general">
+				<source>Allgemein</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.detail">
+				<source>Detail</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

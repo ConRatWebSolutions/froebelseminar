@@ -1,0 +1,5 @@
+# Automatische Aktivierung der Extension
+mod.web_layout.tt_content.preview.list.crbuchkatalog_crbuchkatalog = EXT:crbuchkatalog/Resources/Private/Templates/Preview.html
+
+# Extension automatisch in Root-Template aktivieren
+TCEFORM.tt_content.list_type.addItems.crbuchkatalog_crbuchkatalog = ConRat Buchkatalog

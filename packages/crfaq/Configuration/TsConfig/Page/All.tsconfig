@@ -1,0 +1,15 @@
+# Add plugin wizard
+mod.wizards.newContentElement.wizardItems.plugins {
+    elements {
+        crfaq_crfaq {
+            iconIdentifier = crfaq-plugin-crfaq
+            title = LLL:EXT:crfaq/Resources/Private/Language/locallang.xlf:plugin.crfaq_crfaq.name
+            description = LLL:EXT:crfaq/Resources/Private/Language/locallang.xlf:plugin.crfaq_crfaq.description
+            tt_content_defValues {
+                CType = list
+                list_type = crfaq_crfaq
+            }
+        }
+    }
+    show = *
+}

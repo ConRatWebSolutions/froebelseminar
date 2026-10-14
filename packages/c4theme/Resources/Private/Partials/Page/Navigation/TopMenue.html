@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+ 
+ 
+
+<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-external-link"></i> Intern</button>
+<ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+    <f:for each="{topInternNav}" as="menu">
+      <li>
+       <a class="nav-link active" aria-current="page" href="{menu.link}">{menu.title}</a>
+       
+       <f:if condition="{menu.children}">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><b class="caret"></b></a>
+         <ul class="nav-ebene-zwei">
+             <f:for each="{menu.children}" as="children">
+                 <li><a href="{children.link}" title="{children.title}" class="{f:if(condition:'{children.active}',then:'active')}" >{children.title}</a></li>
+             </f:for>
+         </ul>
+     </f:if>
+     </li>
+        
+    </f:for>
+</ul>
+
+ 
+ 
+</html>
+

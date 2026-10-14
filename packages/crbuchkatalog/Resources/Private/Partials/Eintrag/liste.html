@@ -1,0 +1,32 @@
+<div class="table-responsive">
+ <table class="table">
+  <thead>
+    <tr>
+      <th style="width:3%"  scope="col">#</th>
+      <th style="width:60%"  scope="col">Titel</th>
+      <th style="width:20%" scope="col">Autor</th>
+      <th style="width:7%" scope="col">Veröffentlichungsjahr</th>
+      <th style="width:10%" scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+	 <f:for each="{eintrags}" as="item" iteration="int">
+
+	    <tr>
+	      <th scope="row">{int.cycle}</th>
+	      <td>{item.titel}</td>
+	      <td>{item.autor}</td>
+	      <td>{item.veroeffentlichungsjahr}</td>
+	      <td>
+	      	<f:if condition='{item.pdf.0.identifier}!=""'><a href="fileadmin{item.pdf.0.identifier}" target="_blank"><i class="fa  fa-file-pdf"></i> PDF</a></f:if>
+	      </td>
+	    </tr>
+	 
+	 
+	
+	 </f:for>
+	 
+  </tbody>
+</table>	
+</div> 

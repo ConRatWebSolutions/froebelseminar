@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-01-22UTC14:47:100">
+        <header>
+            <authorName>Martin</authorName>
+            <authorEmail>martin@m.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.example">
+                <source>Example</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="tt_content.c4theme_banner">
+                <source>Banner</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,152 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+	 
+
+		<f:flashMessages />
+<f:if condition="{ldapgroup} == 'schueler'">
+  <h1 class="text-center">Kein Zugriff</h1> 
+</f:if>
+
+		
+		
+<f:if condition="{ldapgroup} == 'dozent'">
+   Hallo {user.name} <br> 
+    
+        
+   <f:link.action action="logouts" class="btn btn-primary btn-sm btn-xs">Abmelden</f:link.action>     
+  <f:link.action action="crons" style="display:none">action link</f:link.action>
+  <a class="btn btnn btn-success pull-right" id="new"> Eintrag hinzufügen</a>
+  
+<f:if condition="{msg} != ''"><div class="alert alert-success" > {msg} </div></f:if> 
+		
+ <div class="row">		
+	 <div class="col-md-12">
+		 <f:link.action action="list" arguments="{year: 'all'}" class="btn btn-primary">Alle</f:link.action>
+		 <f:for each="{years}" as="year">
+			<f:link.action action="list" arguments="{year: '{year}'}" class="btn btn-primary">{year} </f:link.action>
+		 </f:for>
+</div></div>
+	
+	
+<div id="form" style="display:none">	
+	<f:form   id="myform" action="newdrive" class="myform" name="dataSubmit" objectName="dataSubmit"> 
+ 		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Name</label>
+						<f:form.textfield id="username" class="form-control checkInput" property="username" value="{user.name}" placeholder="Bitte Namen eingeben" required="required"  />
+					</div>
+				</div>
+		  </div>
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Datum *</label>
+						<f:form.textfield id="datum" class="form-control checkInput" property="datum" value="{datum}" placeholder="01.01.2021" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">gefahrene KM  *</label>
+						<f:form.textfield id="fahrstrecke" class="form-control checkInput" property="fahrstrecke" value="" placeholder="33" required="required" />  
+					</div>
+				</div>				
+		  </div>
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Abfahrt (von nach) *</label>
+						<f:form.textfield id="von" class="form-control checkInput" property="von" value="" placeholder="Kassel" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Rückfahrt (von nach) *</label>
+						<f:form.textfield id="bis" class="form-control checkInput" property="bis" value="" placeholder="Korbach" required="required" />
+					</div>
+				</div>				
+			</div>			
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Startzeit *</label>
+						<f:form.textfield id="start" class="form-control checkInput" property="start" value="" placeholder="08:00" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Rückkehrzeit *</label>
+						<f:form.textfield id="ende" class="form-control checkInput" property="ende" value="" placeholder="09:30" required="required" />
+					</div>
+				</div>				
+			</div> 	
+ 		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Grund der Fahrt</label>
+						<f:form.textfield id="grund" class="form-control checkInput" property="grund" value="" placeholder="" />
+					</div>
+				</div>
+		  </div>			
+  		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Bemerkung</label>
+						<f:form.textfield id="bemerkung" class="form-control checkInput" property="bemerkung" value="" placeholder="" />
+					</div>
+				</div>
+		  </div>
+		  <f:form.hidden property="user" value="{user.uid}" />
+		  <f:form.button property="saveit" id="saveTrigger" class="btn btnn btn-success" value="1" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Speichern</f:form.button> 	
+ 	</f:form>
+</div>
+
+ 
+
+
+
+<br style="clear:both "><div class="table-responsive"><table class="table  table-hover"> 
+
+	<thead>
+		<th scope="col">Datum</th>
+		<th scope="col">von -  bis </th>
+		<th scope="col">Bemerkung / Grund </th>
+		<th scope="col">Fahrstrecke</th>
+        <th scope="col"></th>
+	 </thead>
+	 
+	<f:for each="{logbooks}" as="logss">
+		<tr class="heads">
+			<td colspan="4"> Monat {logss.monat}</td>
+			 
+			<td>{logss.gesamt} km</td>
+		</tr>		
+		
+	 <f:for each="{logss.data}" as="log">
+		<tr>
+			<td><f:format.date format="d.m.Y">{log.datum}</f:format.date></td>
+			<td>{log.von} ({log.start}) - {log.bis} ({log.ende})</td>
+			<td>{log.bemerkung} {log.grund}</td>
+			<td>{log.fahrstrecke} km</td>
+            <td><f:link.action action="edit" arguments="{key : '{log.uid}'}"><i class="fa fa-pencil pr-10"></i></f:link.action></td>
+		</tr>
+	   </f:for>
+	</f:for>	
+</table></div>	
+</f:if>
+
+	</f:section>
+</html>

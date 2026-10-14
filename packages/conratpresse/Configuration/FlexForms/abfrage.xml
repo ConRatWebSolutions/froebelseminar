@@ -1,0 +1,77 @@
+<T3DataStructure>
+    <meta type="array">
+        <langChildren>0</langChildren>
+        <langDisable>1</langDisable>
+    </meta>
+   <sheets>
+     <Layout>
+     		<ROOT>
+                <type>array</type>
+                <el>
+					<settings.category>
+						<label>Kategorie</label>
+						<config>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">- Keine Kategorie auswählen -</numIndex>
+									<numIndex index="1">0</numIndex>
+								</numIndex>
+							</items>														 
+							<type>select</type>
+							<renderType>selectMultipleSideBySide</renderType>
+							<size>3</size>
+							<maxitems>9</maxitems>
+							<foreign_table>tx_conratpresse_domain_model_kategorie</foreign_table>
+							<itemListStyle>width:100%</itemListStyle>
+						</config>
+					</settings.category>
+
+
+                    <settings.ansicht>
+                        <label>Ansicht</label>
+                        <config>
+                          <type>select</type>
+                          <renderType>selectSingle</renderType>
+                           <items type="array">
+                            <numIndex index="0" type="array">
+                              <numIndex index="0">Blogansicht</numIndex>
+                              <numIndex index="1">blog</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                              <numIndex index="0">Kachel</numIndex>
+                              <numIndex index="1">kachel</numIndex>
+                            </numIndex>
+                          </items>
+                            <maxitems>1</maxitems>
+                          <size>1</size>
+                        </config>
+                    </settings.ansicht>
+ 
+
+                      <settings.anzahl>
+                        <label>Anzahl</label>
+                        <config>
+                          <type>input</type>
+                          <size>20</size>
+                          <max>300</max>
+                          <eval>trim</eval>
+                        </config>
+                    </settings.anzahl> 
+
+       
+                    <settings.containers>
+                        <label>Container anzeigen</label>
+                        <config>
+                          <type>check</type>                           
+                          <default>0</default>
+                        </config>
+                    </settings.containers>
+
+
+                </el>
+            </ROOT>
+    </Layout>
+ 
+  
+</sheets>
+</T3DataStructure>

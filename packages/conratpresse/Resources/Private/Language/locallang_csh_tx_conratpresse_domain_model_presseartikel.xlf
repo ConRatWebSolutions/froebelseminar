@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-28T10:19:50Z" product-name="conratpresse">
+		<header/>
+		<body>
+			<trans-unit id="titel.description">
+				<source>titel</source>
+			</trans-unit>
+			<trans-unit id="uberschrift.description">
+				<source>uberschrift</source>
+			</trans-unit>
+			<trans-unit id="datum.description">
+				<source>datum</source>
+			</trans-unit>
+			<trans-unit id="anleser.description">
+				<source>anleser</source>
+			</trans-unit>
+			<trans-unit id="pdf.description">
+				<source>pdf</source>
+			</trans-unit>
+			<trans-unit id="bild.description">
+				<source>bild</source>
+			</trans-unit>
+			<trans-unit id="externerlink.description">
+				<source>externerlink</source>
+			</trans-unit>
+			<trans-unit id="kategorie.description">
+				<source>kategorie</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

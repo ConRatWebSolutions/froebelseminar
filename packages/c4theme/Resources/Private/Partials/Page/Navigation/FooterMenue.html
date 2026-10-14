@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+ 
+ 
+
+<f:spaceless>
+ 
+	<nav>
+		<ul class="nav nav-pills nav-stacked">
+			<f:for each="{footerNav}" as="footerMenuItem" iteration="menuIterator">
+				<li class="{f:if(condition:'{footerMenuItem.active}', then: 'active')}">
+
+					<f:if condition="{rootpages}==83">
+						<f:then>
+							<a href="{footerMenuItem.link}" title="{footerMenuItem.data.title}" target="_sleft">{footerMenuItem.title}</a>
+						</f:then>
+						<f:else>
+							<f:link.typolink parameter="{footerMenuItem.link}" title="{footerMenuItem.data.title}"
+								target="{f:if(condition:'{footerMenuItem.target}', then:'{footerMenuItem.target}', else:'_top')}">
+								{footerMenuItem.title}
+								<f:if condition="{footerMenuItem.data.subtitle}">
+									<br />{footerMenuItem.data.subtitle}
+								</f:if>
+							</f:link.typolink>
+						</f:else>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</nav>
+</f:spaceless>
+</html>

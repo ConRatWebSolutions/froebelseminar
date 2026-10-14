@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-05T14:00:20Z" product-name="crlogbook">
+		<header/>
+		<body>
+			<trans-unit id="tx_crlogbook_domain_model_logbook">
+				<source>Logbook</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.datum">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.ende">
+				<source>Ende</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.fahrstrecke">
+				<source>Fahrstrecke</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.von">
+				<source>Von</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.bis">
+				<source>Bis</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.bemerkung">
+				<source>Bemerkung</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.grund">
+				<source>Grund</source>
+			</trans-unit>
+			<trans-unit id="tx_crlogbook_domain_model_logbook.user">
+				<source>User</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

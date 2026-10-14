@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="form" >
+    <a class="btn btnn btn-success pull-right" href="/dzlogin/fahrtenbuch">zurück zur Übersicht</a>
+	<f:form   id="myform" action="updatedrive" class="myform" name="dataSubmit" objectName="dataSubmit"> 
+        <f:form.hidden property="key" value="{logbook.uid}" />
+ 		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Name</label>
+						<f:form.textfield id="username" class="form-control checkInput" property="username" value="{logbook.username}" placeholder="Bitte Namen eingeben" required="required"  />
+					</div>
+				</div>
+		  </div>
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Datum *</label>
+						<f:form.textfield id="datum" class="form-control checkInput" property="datum" value="<f:format.date format='d.m.Y'>{logbook.datum}</f:format.date>" placeholder="01.01.2021" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">gefahrene KM  *</label>
+						<f:form.textfield id="fahrstrecke" class="form-control checkInput" property="fahrstrecke" value="{logbook.fahrstrecke}" placeholder="33" required="required" />  
+					</div>
+				</div>				
+		  </div>
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Abfahrt (von nach) *</label>
+						<f:form.textfield id="von" class="form-control checkInput" property="von" value="{logbook.von}" placeholder="Kassel" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Rückfahrt (von nach) *</label>
+						<f:form.textfield id="bis" class="form-control checkInput" property="bis" value="{logbook.bis}" placeholder="Korbach" required="required" />
+					</div>
+				</div>				
+			</div>			
+ 		  <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Startzeit *</label>
+						<f:form.textfield id="start" class="form-control checkInput" property="start" value="{logbook.start}" placeholder="08:00" required="required" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="titel">Geschätzte Rückkehrzeit *</label>
+						<f:form.textfield id="ende" class="form-control checkInput" property="ende" value="{logbook.ende}" placeholder="09:30" required="required" />
+					</div>
+				</div>				
+			</div> 	
+ 		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Grund der Fahrt</label>
+						<f:form.textfield id="grund" class="form-control checkInput" property="grund" value="{logbook.grund}" placeholder="" />
+					</div>
+				</div>
+		  </div>			
+  		  <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="titel">Bemerkung</label>
+						<f:form.textfield id="bemerkung" class="form-control checkInput" property="bemerkung" value="{logbook.bemerkung}" placeholder="" />
+					</div>
+				</div>
+		  </div>
+		  <f:form.hidden property="user" value="{user.uid}" />
+		  <f:form.button property="saveit" id="saveTrigger" class="btn btnn btn-success" value="1" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Speichern</f:form.button> 
+        
+        <a class="btn btnn btn-danger  " href="/dzlogin/fahrtenbuch">Abbrechen</a>
+ 	</f:form>

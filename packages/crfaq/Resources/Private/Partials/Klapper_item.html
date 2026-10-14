@@ -1,0 +1,24 @@
+<f:for each="{eintrags}" as="eintrag" iteration="iterator">	
+    <div class="accordion-item">
+
+		<h2 class="accordion-header" id="accordion-heading-{config.cuid}-{eintrag.uid}">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-{config.cuid}-{eintrag.uid}" data-bs-parent="#accordion-{config.cuid}" aria-expanded="false" aria-controls="accordion-{config.cuid}-{eintrag.uid}">
+				{eintrag.frage}
+			</button>
+		</h2>
+		<div id="accordion-{config.cuid}-{eintrag.uid}" class="accordion-collapse collapse" aria-labelledby="accordion-heading-{config.cuid}-{eintrag.uid}" data-bs-parent="#accordion-{config.cuid}">
+			<div class="accordion-body">
+				<div class="accordion-content accordion-content-left">
+					
+					<div class="accordion-content-item accordion-content-text">
+						<f:format.html>{eintrag.antwort}</f:format.html>
+					</div>
+				</div>
+			</div>
+		</div>
+
+ 
+           
+           
+    </div>
+</f:for>				

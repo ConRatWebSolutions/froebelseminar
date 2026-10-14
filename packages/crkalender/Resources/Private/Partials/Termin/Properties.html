@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+ 
+			   <div class="col-md-12">
+			   	<h1 class="page-title">{termin.titel}</h1>
+				<div class="separator-2"></div>
+			   	
+			  </div>
+ 
+			   <br /><br />
+			   <div class="col-md-12"> 
+			   <f:if condition="{termin.kurzbeschreibung} != ''"><f:format.html>{termin.kurzbeschreibung}</f:format.html> </f:if>  
+			    
+			                   <table class="table">
+							     <tr>
+								  <td><p>Wann:</p></td>
+								  <td><p><f:format.date format="d.m.Y H:i">{termin.datum}</f:format.date> Uhr</p></td>
+								</tr>
+							    <tr>
+								  <td><p>Wo:</p></td>
+								  <td><p>{termin.ort}</p></td>
+								</tr>	
+                                 <f:if condition="{termin.kosten} != ''">
+ 							    <tr>
+								  <td><p>Kosten:</p></td>
+								  <td><f:format.html>{termin.kosten}</f:format.html></td>
+								</tr>                                
+                                </f:if>
+                                   <f:if condition="{termin.referent} != ''">
+ 							    <tr>
+								  <td><p>Referent:</p></td>
+								  <td><f:format.html>{termin.referent}</f:format.html></td>
+								</tr>                                
+                                </f:if>                              
+								</table>
+				 
+				<f:if condition="{bilder-> f:count()} == 0">
+					<f:render partial="Termin/ShowNoImages" arguments="{bilder: bilder, termin:termin, config:config}" />
+				</f:if>
+				
+				<f:if condition="{bilder-> f:count()} == 1">
+					<f:render partial="Termin/ShowImagesRight" arguments="{bilder: bilder, termin:termin, config:config}" />
+				</f:if>	 
+				
+				<f:if condition="{bilder-> f:count()} == 2">
+					<f:render partial="Termin/ShowImagesRight" arguments="{bilder: bilder, termin:termin, config:config}" />
+				</f:if>		
+				
+				<f:if condition="{bilder-> f:count()} >= 3">
+					<f:render partial="Termin/ShowImagesUnder" arguments="{bilder: bilder, termin:termin, config:config}" />
+				</f:if>					  
+								  <br style="clear:both"><br>
+			  </div>
+ 			   <div class="col-md-12 align-right">
+			  	 <p align="right">	<a class="btn btnRE" href="javascript:history.back()">« zur&uuml;ck</a></p> 
+			   </div>
+</html>

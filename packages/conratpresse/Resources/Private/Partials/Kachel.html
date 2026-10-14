@@ -1,0 +1,59 @@
+<f:for each="{presseartikels}" as="presseartikel">
+
+
+<div class="col-sm-4 col-sm-6">
+	<div class="box-style-1 white-bg object-non-visible animated object-visible fadeInUpSmall newsBox" data-animation-effect="fadeInUpSmall" data-effect-delay="400">
+		
+   <f:if condition="{presseartikel.pdf.0.identifier} != ''">
+         <f:then>
+          	<a class="newsLink" href="/fileadmin/{presseartikel.pdf.0.identifier}" target="_blank" >
+		     <f:if condition="{presseartikel.bild.0.identifier} != ''">
+					<f:then> 
+						<img src="/fileadmin/{presseartikel.bild.0.identifier}" class="img-responsive center-block" /> 
+					</f:then>
+					<f:else> 
+						<img src="/fileadmin/user_upload/WebData/kein_bild.jpg" class="img-responsive center-block" />
+					</f:else>
+				</f:if>
+			</a>
+         </f:then>
+         <f:else>
+           <a class="newsLink" href="{presseartikel.main.externerlink}" target="_blank" rel='nofollow'  >
+    		     <f:if condition="{presseartikel.bild.0.identifier} != ''">
+					<f:then> 
+						<img src="/fileadmin/{presseartikel.bild.0.identifier}" class="img-responsive center-block" /> 
+					</f:then>
+					<f:else> 
+						<img src="/fileadmin/user_upload/WebData/kein_bild.jpg" class="img-responsive center-block" />
+					</f:else>
+				</f:if>       	 	
+           </a>
+         </f:else>
+      </f:if>
+		
+		
+				 
+			
+		<h4>{presseartikel.main.titel}</h4>
+		 <b>{presseartikel.main.uberschrift}</b> 
+				<f:format.crop maxCharacters="120"><f:format.raw>{presseartikel.main.anleser}</f:format.raw></f:format.crop>
+			   <f:if condition="{presseartikel.pdf.0.identifier} != ''">
+	             <f:then>
+	              	<a class="newsLink btn-default btn" href="/fileadmin/{presseartikel.pdf.0.identifier}" target="_blank" >Beitrag lesen</a>
+	             </f:then>
+	             <f:else>
+	               <a class="newsLink btn-default btn" href="{presseartikel.main.externerlink}" target="_blank" rel='nofollow'  >Beitrag lesen</a>
+	             </f:else>
+	            </f:if>			
+		
+		 
+		
+	</div>
+</div>
+
+
+ 
+
+ 
+</f:for>
+ 

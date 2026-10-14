@@ -1,0 +1,113 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+	<link rel="stylesheet" type="text/css" href="https://analytics.chatbot4you.io/crthemes/bootstrap/3/latest.min.css" media="all"> 
+	<link rel="stylesheet" type="text/css" href="https://analytics.chatbot4you.io/crthemes/fontawesome/4/latest.css" media="all"> 
+ 	<style>
+ 		.heads {
+    background: #d2d2d2;
+    font-weight: bolder;
+    }
+ 
+ 	.btn { font-size:30px; color:#fff; background:#777}	
+ 	</style>
+		<f:flashMessages />
+ <div   style="height:100%;overflow-y: scroll;"> 		
+ <div class="col-lg-offset-1 col-lg-10"  > 
+	  
+	  
+	   <f:form   id="myform" action="belistd" class="myform" name="dataSubmit" objectName="dataSubmit"> #
+	    	<select id="select" onchange="myFunction()" name="tx_crlogbook_web_crlogbookcrlogbook[dataSubmit][week]">
+	    		<f:format.raw>{options}</f:format.raw>
+	    	</select> 
+	    	<select id="selecty" onchange="myFunction()" name="tx_crlogbook_web_crlogbookcrlogbook[dataSubmit][year]">
+	    		<f:format.raw>{jahr}</f:format.raw>
+	    	</select> 	    	  	
+	    </f:form>  	
+ 	
+ 	 <a class="btn pull-right" onclick="printer()">
+  		<i class="fa  fa-print"></i>
+ 	 	  </a> 
+
+<div  id="printtables"> 
+	<h1>Fahrtenbuch KW {week} <span style="font-size:19px; font-weight:normal">{ersterTag} - {letzterTag}</span></h1>
+	   <br style="clear:both "> 
+ 
+	
+	 
+		<div class="table-responsive"><table class="table  table-hover" cellspacing="0" cellpadding="0">  
+		
+			<thead>
+				<th scope="col">Datum</th>
+				<th scope="col">von -  bis </th>
+				<th scope="col">Bemerkung / Grund </th>
+				<th scope="col">Fahrstrecke</th>
+				<th scope="col">Dozent</th>
+			 </thead>
+			  
+			<f:for each="{logbooks}" as="logss">
+		 		
+				
+			 <f:for each="{logss.data}" as="log">
+				<tr>
+					<td><f:format.date format="d.m.Y">{log.datum}</f:format.date></td>
+					<td>{log.von} ({log.start}) - {log.bis} ({log.ende})</td>
+					<td>{log.bemerkung} {log.grund}</td>
+					<td>{log.fahrstrecke} km</td>
+					<td>{log.user.name}{log.username} </td>
+					
+				</tr>
+			   </f:for>
+				 <tr class="heads">
+					<td> Gesamtkilometer </td>
+					<td>  </td>
+					<td> </td>
+					<td>{logss.gesamt} km</td>
+					<td>   </td>
+				</tr>			   
+			   
+			</f:for>
+	
+				
+		</table></div>	
+ </div>
+ </div>
+ </div>
+ 
+ 
+ 
+ 
+    <script type="text/javascript">
+    function printer(){
+    	
+    	console.log("dadadda"); 
+    	
+    	  	
+        var divToPrint=document.getElementById('printtables');
+        newWin= window.open("");
+        newWin.document.write('<style>a {color:#000; text-decoration:none} table{margin:15px} table td{border:1px solid #000; padding:3px; text-align:center} .heads{font-weight:bold} .heads td{padding:8px}     </style>');
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    	
+    }
+    function myFunction() {
+       var x = document.getElementById("select").value;
+		       document.getElementById("myform").submit();  
+		}
+    
+    </script>
+	</f:section>
+</html>

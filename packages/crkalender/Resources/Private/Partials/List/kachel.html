@@ -1,0 +1,42 @@
+<f:debug>{termins}</f:debug>
+	<f:for each="{termins}" as="termin"> 
+	
+     <div class="col-md-4">
+     	<div class="kachel">
+      
+        		 <f:if condition="{termin.main.kurzbeschreibung} != ''">	
+				  	<f:then>
+				  	    <f:link.action class="" pageUid="{config.iddershowseite}" arguments="{uid: '{termin.main.uid}'}" action="detail" ><h3>{termin.main.titel}</h3></f:link.action>
+				  	</f:then>
+				  	<f:else>
+				  	     <h3>{termin.main.titel}</h3>
+				  	</f:else>  
+				  	</f:if>   		
+     		
+     		
+     		<div class="image">
+     			
+		     	<f:if condition="{termin.bild.0.identifier}!=''">
+			    <f:then>
+			     		<img src="fileadmin{termin.bild.0.identifier}">	
+			    </f:then>
+			    <f:else>
+			      		<img src="fileadmin/WebDaten/keinBild.jpg">	
+			    </f:else>
+			  </f:if>		
+     			
+     			
+     			
+     		</div>
+     		<div class="text">
+     	 		<f:format.date format="d.m.Y">{termin.main.datum}</f:format.date>
+     	 		<p>{termin.main.ort}</p>
+     			<f:link.action class="" pageUid="{config.iddershowseite}" arguments="{uid: '{termin.main.uid}'}" action="show" ><span class="link"><i class="fa fa-arrow-right" aria-hidden="true"></i></span></f:link.action>	
+     			<br style="clear: both"> 	 
+     		</div>
+	 
+	    </div>
+	  </div>
+	
+	 
+	</f:for>

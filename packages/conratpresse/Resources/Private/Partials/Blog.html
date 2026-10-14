@@ -1,0 +1,61 @@
+
+
+<div class="container">
+	
+	 
+	<f:widget.paginate objects="{presseartikels}" as="paginatedList" configuration="{itemsPerPage:  '12', insertAbove: 0, insertBelow: 1, maximumNumberOfLinks: 10}">
+	<f:for  each="{paginatedList}"    as="presseartikel">
+	
+	    <div class="presseartikel">
+	
+	        <div class="col-md-3">			
+			 	<f:if condition="{presseartikel.pdf.0.identifier} != ''">
+			         <f:then>
+			          	<a class="newsLink" href="/fileadmin/{presseartikel.pdf.0.identifier}" target="_blank" >
+					     <f:if condition="{presseartikel.bild.0.identifier} != ''">
+								<f:then> 
+									<img src="/fileadmin/{presseartikel.bild.0.identifier}" class="img-responsive" /> 
+								</f:then>
+								<f:else> 
+									<img src="/fileadmin/user_upload/WebData/kein_bild.jpg" class="img-responsive" />
+								</f:else>
+							</f:if>
+						</a>
+			         </f:then>
+			         <f:else>
+			           <a class="newsLink" href="{presseartikel.main.externerlink}" target="_blank" rel='nofollow'  >
+			    		     <f:if condition="{presseartikel.bild.0.identifier} != ''">
+								<f:then> 
+									<img src="/fileadmin/{presseartikel.bild.0.identifier}" class="img-responsive" /> 
+								</f:then>
+								<f:else> 
+									<img src="/fileadmin/user_upload/WebData/kein_bild.jpg" class="img-responsive" />
+								</f:else>
+							</f:if>       	 	
+			           </a>
+			         </f:else>
+			      </f:if>
+            </div>
+ 	        <div class="col-md-9">
+                <div class="presseHeader">{presseartikel.main.uberschrift}</div>
+                <div class="presseTitel">{presseartikel.main.titel}</div>
+                <div class="presseText">{presseartikel.main.anleser}
+	             <br> 
+	             <f:if condition="{presseartikel.pdf.0.identifier} != ''">
+	             <f:then>
+	              	<a href="/fileadmin/{presseartikel.pdf.0.identifier}" target="_blank" >» Beitrag lesen</a>
+	             </f:then>
+	             <f:else>
+	               <a href="{presseartikel.main.externerlink}" target="_blank" rel='nofollow'  >» Beitrag lesen</a>
+	             </f:else>
+	            </f:if>
+               
+                </div>
+            </div>           
+	      <br style="clear:both">
+        </div>
+	
+	 
+	</f:for>
+	</f:widget.paginate>
+    </div>

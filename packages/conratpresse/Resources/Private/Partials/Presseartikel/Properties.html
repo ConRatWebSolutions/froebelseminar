@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-conratpresse" >
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.titel" />
+		</td>
+		<td>
+		{presseartikel.titel}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.uberschrift" />
+		</td>
+		<td>
+		{presseartikel.uberschrift}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.datum" />
+		</td>
+		<td>
+		{presseartikel.datum -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.anleser" />
+		</td>
+		<td>
+		{presseartikel.anleser}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.pdf" />
+		</td>
+		<td>
+				<a href="{presseartikel.pdf.originalResource.publicUrl}">
+					{presseartikel.pdf.originalResource.name}
+				</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.bild" />
+		</td>
+		<td>
+				<f:image src="{presseartikel.bild.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_conratpresse_domain_model_presseartikel.externerlink" />
+		</td>
+		<td>
+		{presseartikel.externerlink}
+		</td>
+	</tr>
+</table>
+</html>
