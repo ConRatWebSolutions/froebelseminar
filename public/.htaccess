@@ -289,6 +289,16 @@ AddDefaultCharset utf-8
 	RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
 	RewriteRule ^.*$ - [E=CWD:%2]
 
+	# froebelseminar.de ohne www -> https://www.froebelseminar.de (sonst Fehler "trusted hosts pattern")
+	RewriteCond %{HTTP_HOST} ^froebelseminar\.de$ [NC]
+	RewriteRule ^(.*)$ https://www.froebelseminar.de/$1 [R=301,L]
+
+	# http -> https für die Live-Domains (lokale *.ddev.site sind nicht betroffen)
+	RewriteCond %{HTTPS} !=on
+	RewriteCond %{THE_REQUEST} !\s/\.well-known/
+	RewriteCond %{HTTP_HOST} ^(www|familienzentrum)\.froebelseminar\.de$ [NC]
+	RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
 	# Rules to set ApplicationContext based on hostname
 	#RewriteCond %{HTTP_HOST} ^dev\.example\.com$
 	#RewriteRule .? - [E=TYPO3_CONTEXT:Development]
